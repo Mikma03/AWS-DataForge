@@ -1,14 +1,17 @@
-# Amazon Web Services
-
 # Table of content
 
+<!-- TOC -->
+
+- [Table of content](#table-of-content)
 - [Introduction](#introduction)
-
 - [Resources and materials](#resources-and-materials)
-
-- [AWS Certified Cloud Practitioner exam (CLF-C01)](#aws-certified-cloud-practitioner-exam-clf-c01)
-
+- [AWS Certified Cloud Practitioner exam CLF-C01](#aws-certified-cloud-practitioner-exam-clf-c01)
 - [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
+- [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
+- [Google Cloud Cloud Digital Leader](#google-cloud-cloud-digital-leader)
+- [Professional Cloud Architect](#professional-cloud-architect)
+
+<!-- /TOC -->
 
 # Introduction
 
@@ -24,24 +27,34 @@
 - AWS Skill Builder
     - https://explore.skillbuilder.aws/learn/signin
 
-- AWS Certified Cloud Practitioner Exam Guide - **Packt**
-    - https://subscription.packtpub.com/book/cloud_and_networking/9781801075930/pref
-
-
 # AWS Certified Solutions Architect
 
-- AWS Certified Solutions Architect Associate - **Udemy**
-    - https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/
+- AWS Certified Solutions Architect - **Adrian Cantrill**
+    - https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c02
 
-- Certified Solutions Architect Associate Practice Exams
+- Certified Solutions Architect Associate **Practice Exams**
     - https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c03/
-
-- AWS for Solutions Architects - **Packt**
-    - https://subscription.packtpub.com/book/cloud_and_networking/9781789539233/pref
-
-- Solutions Architect’s Handbook - Second Edition - **Packt**
-    - https://subscription.packtpub.com/book/web_development/9781801816618/pref/preflvl1sec03/what-this-book-covers
 
 - AWS Certified Solutions Architect Associate **Exam**
     - https://www.whizlabs.com/aws-solutions-architect-associate/
 
+# GCP Associate Cloud Engineer
+
+- GCP Associate Cloud Engineer - Google Cloud Certification
+    - https://www.udemy.com/course/google-cloud-gcp-associate-cloud-engineer-certification/
+
+- Associate Cloud Engineer
+    - https://cloud.google.com/certification/cloud-engineer
+
+#  Google Cloud Cloud Digital Leader
+
+- ExamPro course
+    - https://app.exampro.co/student/journey/cdl
+
+# Professional Cloud Architect
+
+- Blog
+    - https://reviewnprep.com/blog/six-steps-to-google-professional-cloud-architect-certification/?utm_campaign=Blog&utm_medium=referral&utm_source=AllSocialMedia
+
+- ExamPro course
+    - https://www.exampro.co/gcp-pca
