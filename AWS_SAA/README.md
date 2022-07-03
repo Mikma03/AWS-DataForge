@@ -1,16 +1,12 @@
 
-# AWS Certified Solutions Architect
-
-
-# Table of contents
-
 <!-- TOC -->
 
 - [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
-- [Table of contents](#table-of-contents)
 - [Materials](#materials)
 
 <!-- /TOC -->
+
+# AWS Certified Solutions Architect
 
 
 # Materials

@@ -1,10 +1,5 @@
-# Table of content
-
 <!-- TOC -->
 
-- [Table of content](#table-of-content)
-- [Introduction](#introduction)
-- [Resources and materials](#resources-and-materials)
 - [AWS Certified Cloud Practitioner exam (CLF-C01)](#aws-certified-cloud-practitioner-exam-clf-c01)
 - [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
 - [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
@@ -13,9 +8,6 @@
 
 <!-- /TOC -->
 
-# Introduction
-
-# Resources and materials
 
 # AWS Certified Cloud Practitioner exam (CLF-C01)
 
