@@ -5,6 +5,7 @@
 - [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
 - [Google Cloud Cloud Digital Leader](#google-cloud-cloud-digital-leader)
 - [Professional Cloud Architect](#professional-cloud-architect)
+- [Slack Adrian Cantrill](#slack-adrian-cantrill)
 
 <!-- /TOC -->
 
@@ -48,3 +49,7 @@
 
 - ExamPro course
   - <https://www.exampro.co/gcp-pca>
+
+# Slack Adrian Cantrill
+
+- https://app.slack.com/client/TQBU5QBA8/CQU7B6BB6

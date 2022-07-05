@@ -3,6 +3,7 @@
 
 - [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
 - [Materials](#materials)
+- [Dedicated repo on GitHub](#dedicated-repo-on-github)
 
 <!-- /TOC -->
 
@@ -19,3 +20,9 @@
 
 - AWS Certified Solutions Architect Associate **Practice Exam**
     - https://www.whizlabs.com/aws-solutions-architect-associate/
+
+
+# Dedicated repo on GitHub
+
+- https://github.com/acantril/aws-sa-associate-saac02
+
