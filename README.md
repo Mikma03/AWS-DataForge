@@ -2,11 +2,16 @@
 <!-- TOC -->
 
 - [AWS Certified Cloud Practitioner exam (CLF-C01)](#aws-certified-cloud-practitioner-exam-clf-c01)
-- [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
 - [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
 - [Google Cloud Cloud Digital Leader](#google-cloud-cloud-digital-leader)
-- [Professional Cloud Architect](#professional-cloud-architect)
-- [Slack Adrian Cantrill](#slack-adrian-cantrill)
+- [Google Cloud - Professional Cloud Architect](#google-cloud---professional-cloud-architect)
+- [AWS Certified Solutions Architect](#aws-certified-solutions-architect)
+- [AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill](#aws---saa---dedicated-repo-on-github---adrian-cantrill)
+- [AWS - Slack - Adrian Cantrill](#aws---slack---adrian-cantrill)
+- [AWS - mini projects - Adrian Cantrill](#aws---mini-projects---adrian-cantrill)
+  - [Description](#description)
+  - [GitHub](#github)
+- [SAA additionals reading](#saa-additionals-reading)
 
 <!-- /TOC -->
 
@@ -19,6 +24,30 @@
 - AWS Skill Builder
   - <https://explore.skillbuilder.aws/learn/signin>
 
+# GCP Associate Cloud Engineer
+
+- GCP Associate Cloud Engineer - Google Cloud Certification
+  - <https://www.udemy.com/course/google-cloud-gcp-associate-cloud-engineer-certification/>
+
+- Associate Cloud Engineer
+  - <https://cloud.google.com/certification/cloud-engineer>
+
+
+# Google Cloud Cloud Digital Leader
+
+- ExamPro course
+  - <https://app.exampro.co/student/journey/cdl>
+
+
+# Google Cloud - Professional Cloud Architect
+
+- Blog
+  - <https://reviewnprep.com/blog/six-steps-to-google-professional-cloud-architect-certification/?utm_campaign=Blog&utm_medium=referral&utm_source=AllSocialMedia>
+
+- ExamPro course
+  - <https://www.exampro.co/gcp-pca>
+
+
 # AWS Certified Solutions Architect
 
 - AWS Certified Solutions Architect - **Adrian Cantrill**
@@ -30,27 +59,29 @@
 - AWS Certified Solutions Architect Associate **Exam**
   - <https://www.whizlabs.com/aws-solutions-architect-associate/>
 
-# GCP Associate Cloud Engineer
 
-- GCP Associate Cloud Engineer - Google Cloud Certification
-  - <https://www.udemy.com/course/google-cloud-gcp-associate-cloud-engineer-certification/>
+# AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill
 
-- Associate Cloud Engineer
-  - <https://cloud.google.com/certification/cloud-engineer>
+- https://github.com/acantril/aws-sa-associate-saac02
 
-# Google Cloud Cloud Digital Leader
 
-- ExamPro course
-  - <https://app.exampro.co/student/journey/cdl>
-
-# Professional Cloud Architect
-
-- Blog
-  - <https://reviewnprep.com/blog/six-steps-to-google-professional-cloud-architect-certification/?utm_campaign=Blog&utm_medium=referral&utm_source=AllSocialMedia>
-
-- ExamPro course
-  - <https://www.exampro.co/gcp-pca>
-
-# Slack Adrian Cantrill
+# AWS - Slack - Adrian Cantrill
 
 - https://app.slack.com/client/TQBU5QBA8/CQU7B6BB6
+- 
+
+# AWS - mini projects - Adrian Cantrill
+
+## Description
+
+https://www.linkedin.com/posts/adriancantrill_were-coming-up-to-the-weekend-the-best-activity-6951070385706516480-okSW/?utm_source=linkedin_share&utm_medium=member_desktop_web
+
+## GitHub
+
+- https://github.com/acantril/learn-cantrill-io-labs
+
+
+# SAA additionals reading
+
+- https://github.com/keenanromain/AWS-SAA-C02-Study-Guide
+
