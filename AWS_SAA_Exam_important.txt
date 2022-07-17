@@ -1,0 +1,155 @@
+
+################################################
+# ELASTIC COMPUTE CLOUD (EC2) BASICS
+################################################
+
+
+**Exam questions appears based on this lecture**
+- EC2 Architecture and Resilience
+- https://learn.cantrill.io/courses/730712/lectures/14549494
+
+**Exam questions appears based on this lecture**
+- EC2 Instance Types - PART2
+- https://learn.cantrill.io/courses/730712/lectures/14550451
+
+**Exam questions appears based on this lecture**
+- Choosing between the EC2 Instance Store and EBS
+- https://learn.cantrill.io/courses/730712/lectures/14561544
+
+**Exam questions appears based on this lecture**
+- Snapshots, Restore & Fast Snapshot Restore (FSR)
+- https://learn.cantrill.io/courses/730712/lectures/14576025
+
+**Exam questions appears based on this lecture**
+- EBS Encryption
+- https://learn.cantrill.io/courses/730712/lectures/14576061
+
+**Exam questions appears based on this lecture**
+- Network Interfaces, Instance IPs and DNS
+- https://learn.cantrill.io/courses/730712/lectures/14597404
+
+**Exam questions appears based on this lecture**
+- Amazon Machine Images (AMI)
+- https://learn.cantrill.io/courses/730712/lectures/14598896
+
+**Exam questions appears based on this lecture**
+- Horizontal & Vertical Scaling
+- https://learn.cantrill.io/courses/730712/lectures/14617207
+
+**Exam questions appears based on this lecture**
+- [DEMO] Instance Metadata [THEORY & DEMO]
+- https://learn.cantrill.io/courses/730712/lectures/14617215
+
+
+################################################
+# CONTAINERS & ECS
+################################################
+
+
+**Exam questions appears based on this lecture**
+- ECS - Concepts
+- https://learn.cantrill.io/courses/730712/lectures/14640456
+
+
+**Exam questions appears based on this lecture**
+- ECS - Cluster Mode
+- https://learn.cantrill.io/courses/730712/lectures/14640457
+
+
+################################################
+# ADVANCED EC2
+################################################
+
+
+**Exam questions appears based on this lecture**
+- Bootstrapping EC2 using User Data
+- https://learn.cantrill.io/courses/730712/lectures/14679949
+
+
+**Exam questions appears based on this lecture**
+- EC2 Instance Roles & Profile
+- https://learn.cantrill.io/courses/730712/lectures/14679977
+
+
+**Exam questions appears based on this lecture**
+- EC2 Placement Groups
+- https://learn.cantrill.io/courses/730712/lectures/36047393
+
+
+**Exam questions appears based on this lecture**
+- Enhanced Networking & EBS Optimized
+- https://learn.cantrill.io/courses/730712/lectures/14760364
+
+
+
+################################################
+# Route 53 - Global DNS
+################################################
+
+
+**Exam questions appears based on this lecture**
+- R53 Public Hosted Zones
+- https://learn.cantrill.io/courses/730712/lectures/28015249
+
+
+**Exam questions appears based on this lecture**
+- R53 Private Hosted Zones
+- https://learn.cantrill.io/courses/730712/lectures/28015250
+
+
+**Exam questions appears based on this lecture**
+- CNAME vs R53 Alias
+- https://learn.cantrill.io/courses/730712/lectures/28015254
+
+
+**Exam questions appears based on this lecture**
+- R53 Health Checks
+- https://learn.cantrill.io/courses/730712/lectures/28015257
+
+
+**Exam questions appears based on this lecture**
+- Geolocation Routing
+- https://learn.cantrill.io/courses/730712/lectures/28015269
+
+
+
+################################################
+# Relational Database Service (RDS)
+################################################
+
+
+**Exam questions appears based on this lecture**
+- Database Refresher & MODELS - PART2 - NoSQL
+- https://learn.cantrill.io/courses/730712/lectures/14831884
+
+
+**Exam questions appears based on this lecture**
+- ACID vs BASE
+- https://learn.cantrill.io/courses/730712/lectures/30062911
+
+
+**Exam questions appears based on this lecture**
+- RDS High-Availability (Multi AZ)
+- https://learn.cantrill.io/courses/730712/lectures/14923950
+
+
+**Exam questions appears based on this lecture**
+- RDS Automatic Backup, RDS Snapshots and Restore
+- https://learn.cantrill.io/courses/730712/lectures/14923952
+
+
+**Exam questions appears based on this lecture**
+- Database Migration Service (DMS)
+- https://learn.cantrill.io/courses/730712/lectures/15747976
+
+
+
+################################################
+# NETWORK STORAGE & DATA LIFECYCLE
+################################################
+
+
+**Exam questions appears based on this lecture**
+- EFS Architecture
+- https://learn.cantrill.io/courses/730712/lectures/14990550
+

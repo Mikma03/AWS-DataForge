@@ -1,7 +1,7 @@
 
 <!-- TOC -->
 
-- [AWS Certified Cloud Practitioner exam (CLF-C01)](#aws-certified-cloud-practitioner-exam-clf-c01)
+- [AWS Certified Cloud Practitioner exam CLF-C01](#aws-certified-cloud-practitioner-exam-clf-c01)
 - [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
 - [Google Cloud Cloud Digital Leader](#google-cloud-cloud-digital-leader)
 - [Google Cloud - Professional Cloud Architect](#google-cloud---professional-cloud-architect)
@@ -9,9 +9,10 @@
 - [AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill](#aws---saa---dedicated-repo-on-github---adrian-cantrill)
 - [AWS - Slack - Adrian Cantrill](#aws---slack---adrian-cantrill)
 - [AWS - mini projects - Adrian Cantrill](#aws---mini-projects---adrian-cantrill)
-  - [Description](#description)
-  - [GitHub](#github)
-- [SAA additionals reading](#saa-additionals-reading)
+    - [Description](#description)
+    - [GitHub](#github)
+- [SAA additionals reading - external resources](#saa-additionals-reading---external-resources)
+- [AWS Cheat Sheets](#aws-cheat-sheets)
 
 <!-- /TOC -->
 
@@ -23,6 +24,7 @@
 
 - AWS Skill Builder
   - <https://explore.skillbuilder.aws/learn/signin>
+
 
 # GCP Associate Cloud Engineer
 
@@ -51,13 +53,16 @@
 # AWS Certified Solutions Architect
 
 - AWS Certified Solutions Architect - **Adrian Cantrill**
-  - <https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c02>
+  - https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c02
 
 - Certified Solutions Architect Associate **Practice Exams**
-  - <https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c03/>
+  - https://portal.tutorialsdojo.com/courses/aws-certified-solutions-architect-associate-practice-exams/#learndash-course-content
 
-- AWS Certified Solutions Architect Associate **Exam**
-  - <https://www.whizlabs.com/aws-solutions-architect-associate/>
+- AWS Certified Solutions Architect Associate **Practice Exam**
+  - https://www.whizlabs.com/aws-solutions-architect-associate/
+
+- AWS Certified Solutions Architect Associate **Practice Exam**
+  - https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/
 
 
 # AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill
@@ -68,7 +73,7 @@
 # AWS - Slack - Adrian Cantrill
 
 - https://app.slack.com/client/TQBU5QBA8/CQU7B6BB6
-- 
+
 
 # AWS - mini projects - Adrian Cantrill
 
@@ -81,7 +86,12 @@ https://www.linkedin.com/posts/adriancantrill_were-coming-up-to-the-weekend-the-
 - https://github.com/acantril/learn-cantrill-io-labs
 
 
-# SAA additionals reading
+# SAA additionals reading - external resources
 
 - https://github.com/keenanromain/AWS-SAA-C02-Study-Guide
+
+
+# AWS Cheat Sheets
+
+- https://tutorialsdojo.com/aws-cheat-sheets/
 

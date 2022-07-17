@@ -9,6 +9,11 @@
 - [Simple Storage Service - S3](#simple-storage-service---s3)
 - [Virtual Private Cloud - VPC Basic](#virtual-private-cloud---vpc-basic)
 - [Elastic Compute Cloud - EC2 - Basic](#elastic-compute-cloud---ec2---basic)
+- [CONTAINERS & ECS](#containers--ecs)
+- [ADVANCED EC2](#advanced-ec2)
+- [Route 53 - Global DNS](#route-53---global-dns)
+- [Relational Database Service (RDS)](#relational-database-service-rds)
+- [NETWORK STORAGE & DATA LIFECYCLE](#network-storage--data-lifecycle)
 
 <!-- /TOC -->
 
@@ -408,10 +413,229 @@
 - [DEMO] Manual Install of Wordpress on EC2 - PART2
   - https://learn.cantrill.io/courses/730712/lectures/29078191
 
+- Amazon Machine Images (AMI)
+  - https://learn.cantrill.io/courses/730712/lectures/14598896
+
+- [DEMO] Creating an Animals4life AMI - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/14599922
+
+- [DEMO] Creating an Animals4life AMI - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/29078286
+
+- [DEMO] Copying & Sharing an AMI
+  - https://learn.cantrill.io/courses/730712/lectures/40967253
+
+- EC2 Purchase Options - PART1
+  -  https://learn.cantrill.io/courses/730712/lectures/36046909
+
+- EC2 Purchase Options - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36046913
+
+- Reserved Instances - the rest
+  - https://learn.cantrill.io/courses/730712/lectures/36046914
+
+- Instance Status Checks & Auto Recovery
+  - https://learn.cantrill.io/courses/730712/lectures/14616991
+
+- [DEMO] Shutdown, Terminate & Termination Protection
+  - https://learn.cantrill.io/courses/730712/lectures/29725578
+
+- Horizontal & Vertical Scaling
+  - https://learn.cantrill.io/courses/730712/lectures/14617207
+
+- [DEMO] Instance Metadata [THEORY & DEMO]
+  - https://learn.cantrill.io/courses/730712/lectures/14617215
+
+
+# CONTAINERS & ECS
+
+- Introduction to Containers
+  - https://learn.cantrill.io/courses/730712/lectures/14639197
+
+- [DEMO] Creating 'container of cats' Docker Image
+  - https://learn.cantrill.io/courses/730712/lectures/36181765
+
+- ECS - Concepts
+  - https://learn.cantrill.io/courses/730712/lectures/14640456
+
+- ECS - Cluster Mode
+  - https://learn.cantrill.io/courses/730712/lectures/14640457
+
+- [DEMO] - Deploying 'container of cats' using Fargate
+  - https://learn.cantrill.io/courses/730712/lectures/36185023
+
+
+# ADVANCED EC2
+
+- Bootstrapping EC2 using User Data
+  - https://learn.cantrill.io/courses/730712/lectures/14679949
+
+- [DEMO] Bootstrapping Wordpress Installation - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36047279
+
+- [DEMO] Bootstrapping Wordpress Installation - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36047280
+
+- Enhanced Bootstrapping with CFN-INIT
+  - https://learn.cantrill.io/courses/730712/lectures/14679968
+
+- [DEMO] CFN-INIT and CFN Creation Policies
+  - https://learn.cantrill.io/courses/730712/lectures/14679975
+
+- EC2 Instance Roles & Profile
+  - https://learn.cantrill.io/courses/730712/lectures/14679977
+
+- [DEMO] Using EC2 Instance Roles
+  - https://learn.cantrill.io/courses/730712/lectures/14679978
+
+- SSM Parameter Store
+  - https://learn.cantrill.io/courses/730712/lectures/14726329
+
+- [DEMO] Parameter Store
+  - https://learn.cantrill.io/courses/730712/lectures/14726913
+
+- System and Application Logging on EC2
+  - https://learn.cantrill.io/courses/730712/lectures/14727078
+
+- [DEMO] Logging and Metrics with CW Agent-PART1
+  - https://learn.cantrill.io/courses/730712/lectures/14727081
+
+- [DEMO] Logging and Metrics with CW Agent-PART2
+  - https://learn.cantrill.io/courses/730712/lectures/29448641
+
+- EC2 Placement Groups
+  - https://learn.cantrill.io/courses/730712/lectures/36047393
+
+- Dedicated Hosts
+  - https://learn.cantrill.io/courses/730712/lectures/14727083
+
+- Enhanced Networking & EBS Optimized
+  - https://learn.cantrill.io/courses/730712/lectures/14760364
+
+
+# Route 53 - Global DNS
+
+- R53 Public Hosted Zones
+  - https://learn.cantrill.io/courses/730712/lectures/28015249
+
+- R53 Private Hosted Zones
+  - https://learn.cantrill.io/courses/730712/lectures/28015250
+
+- CNAME vs R53 Alias
+  - https://learn.cantrill.io/courses/730712/lectures/28015254
+
+- Simple Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015256
+
+- R53 Health Checks
+  - https://learn.cantrill.io/courses/730712/lectures/28015257
+
+- Failover Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015259
+
+- [DEMO] Using R53 and Failover Routing-PART1
+  - https://learn.cantrill.io/courses/730712/lectures/28015260
+
+- [DEMO] Using R53 and Failover Routing-PART2
+  - https://learn.cantrill.io/courses/730712/lectures/30416864
+
+- Multi Value Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015261
+
+- Weighted Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015263
+
+- Latency Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015264
+
+- Geolocation Routing
+  - https://learn.cantrill.io/courses/730712/lectures/28015269
+
+- Geoproximity
+  - https://learn.cantrill.io/courses/730712/lectures/28015271
+
+- R53 Interoperability
+  - https://learn.cantrill.io/courses/730712/lectures/28015272
+
+
+# Relational Database Service (RDS)
+
+- Database Refresher & MODELS - PART1 - SQL
+  - https://learn.cantrill.io/courses/730712/lectures/14831877
+
+- Database Refresher & MODELS - PART2 - NoSQL
+  - https://learn.cantrill.io/courses/730712/lectures/14831884
+
+ - ACID vs BASE
+  - https://learn.cantrill.io/courses/730712/lectures/30062911
+
+- Databases on EC2
+  - https://learn.cantrill.io/courses/730712/lectures/14835740
+
+- [DEMO] Splitting Wordpress Monolith => APP & DB
+  - https://learn.cantrill.io/courses/730712/lectures/14836089
+
+- Relational Database Service (RDS) Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/14899227
+
+- [DEMO] Migrating EC2 DB into RDS - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/14923946
+
+- [DEMO] Migrating EC2 DB into RDS - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/14923947
+
+- RDS High-Availability (Multi AZ)
+  - https://learn.cantrill.io/courses/730712/lectures/14923950
+
+- RDS Automatic Backup, RDS Snapshots and Restore
+  - https://learn.cantrill.io/courses/730712/lectures/14923952
+
+- RDS Read-Replicas
+  - https://learn.cantrill.io/courses/730712/lectures/14923953
+
+- [DEMO] MultiAZ & Snapshot Restore with RDS - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/14923954
+
+- [DEMO] MultiAZ & Snapshot Restore with RDS - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/14923961
+
+- RDS Data Security
+  - https://learn.cantrill.io/courses/730712/lectures/27570953
+
+- Aurora Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/14923964
+
+- [DEMO] Migrating Wordpress onto Aurora - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/14954140
+
+- [DEMO] Migrating Wordpress onto Aurora - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/29538945
+
+-  Aurora Serverless
+   - https://learn.cantrill.io/courses/730712/lectures/14954142
+
+- [DEMO] Migrating to Aurora Serverless
+  - https://learn.cantrill.io/courses/730712/lectures/29562431
+
+- Aurora Global Database
+  - https://learn.cantrill.io/courses/730712/lectures/14954149
+
+- Aurora Multi-master writes
+  - https://learn.cantrill.io/courses/730712/lectures/14954151
+
+- Database Migration Service (DMS)
+  - https://learn.cantrill.io/courses/730712/lectures/15747976
 
 
 
+# NETWORK STORAGE & DATA LIFECYCLE
 
+
+- EFS Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/14990550
+
+- [DEMO] Implementing EFS - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/29562469
 
 
 
