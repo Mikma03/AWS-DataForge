@@ -14,6 +14,8 @@
 - [Route 53 - Global DNS](#route-53---global-dns)
 - [Relational Database Service (RDS)](#relational-database-service-rds)
 - [NETWORK STORAGE & DATA LIFECYCLE](#network-storage--data-lifecycle)
+- [HA & SCALING](#ha--scaling)
+- [SERVERLESS AND APPLICATION SERVICES](#serverless-and-application-services)
 
 <!-- /TOC -->
 
@@ -116,6 +118,11 @@
 - Secure Sockets Layer (SSL) and Transport Layer Security (TLS)
   - https://learn.cantrill.io/courses/730712/lectures/27799870
 
+- Hash Functions & Hashing
+  - https://learn.cantrill.io/courses/730712/lectures/41817977
+
+- Digital Signatures
+  - https://learn.cantrill.io/courses/730712/lectures/41818183
 
 # AWS Fundamentals
 
@@ -637,5 +644,110 @@
 - [DEMO] Implementing EFS - PART1
   - https://learn.cantrill.io/courses/730712/lectures/29562469
 
+- [DEMO] Implementing EFS - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/29562472
+
+- [DEMO] Using EFS with Wordpress
+  - https://learn.cantrill.io/courses/730712/lectures/29562743
+  
 
 
+# HA & SCALING
+
+- Regional and Global AWS Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/36048264
+
+- Elastic Load Balancer Architecture - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36048304
+
+- Elastic Load Balancer Architecture - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36048305
+
+- Application Load balancing (ALB) vs Network Load Balancing (NLB)
+  - https://learn.cantrill.io/courses/730712/lectures/36048307
+
+- Launch Configuration and Templates
+  - https://learn.cantrill.io/courses/730712/lectures/36048308
+
+- Auto-Scaling Groups
+  - https://learn.cantrill.io/courses/730712/lectures/36048316
+
+- ASG Scaling Policies
+  - https://learn.cantrill.io/courses/730712/lectures/36048317
+
+- ASG Lifecycle Hooks
+  - https://learn.cantrill.io/courses/730712/lectures/36048319
+
+- ASG HealthCheck Comparison - EC2 vs ELB
+  - https://learn.cantrill.io/courses/730712/lectures/36048320
+
+- [AdvancedDemo] Architecture Evolution - STAGE1 - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/29852547
+
+- [AdvancedDemo] Architecture Evolution - STAGE1 - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/29852549
+
+- [AdvancedDemo] Architecture Evolution - STAGE2
+  - https://learn.cantrill.io/courses/730712/lectures/29852550
+
+- [AdvancedDemo] Architecture Evolution - STAGE3
+  - https://learn.cantrill.io/courses/730712/lectures/29852551
+
+- [AdvancedDemo] Architecture Evolution - STAGE4
+  - https://learn.cantrill.io/courses/730712/lectures/29852552
+
+
+
+- Gateway Load Balancer
+  - https://learn.cantrill.io/courses/730712/lectures/34350240
+
+
+
+# SERVERLESS AND APPLICATION SERVICES
+
+
+- Architecture Deep Dive - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15190436
+
+- Architecture Deep Dive - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15190450
+
+- AWS Lambda - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36049038
+
+- AWS Lambda - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36049039
+
+- AWS Lambda - PART3
+  - https://learn.cantrill.io/courses/730712/lectures/36049040
+
+- CloudWatchEvents and EventBridge
+  - https://learn.cantrill.io/courses/730712/lectures/15191500
+
+- [DEMO] Automated EC2 Control using Lambda and Events - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15191955
+
+- [DEMO] Automated EC2 Control using Lambda and Events - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15193981
+
+- Serverless Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/15267917
+
+- Simple Notification Service
+  - https://learn.cantrill.io/courses/730712/lectures/15267920
+
+- Step Functions
+  - https://learn.cantrill.io/courses/730712/lectures/15267923
+
+- API Gateway
+  - https://learn.cantrill.io/courses/730712/lectures/15267912
+
+
+
+
+
+- Simple Queue Service
+  - https://learn.cantrill.io/courses/730712/lectures/15267945
+
+- Kinesis Data Streams
+  - https://learn.cantrill.io/courses/730712/lectures/36049059

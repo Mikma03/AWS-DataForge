@@ -2,7 +2,6 @@
 
 <!-- TOC -->
 
-- [Theory and AWS docs](#theory-and-aws-docs)
 - [Route 53 - Global DNS](#route-53---global-dns)
   - [R53 Public Hosted Zones](#r53-public-hosted-zones)
   - [R53 Private Hosted Zones](#r53-private-hosted-zones)
@@ -33,19 +32,35 @@
   - [Database Migration Service (DMS)](#database-migration-service-dms)
 - [NETWORK STORAGE & DATA LIFECYCLE](#network-storage--data-lifecycle)
   - [EFS Architecture](#efs-architecture)
+- [HA & SCALING](#ha--scaling)
+  - [Regional and Global AWS Architecture](#regional-and-global-aws-architecture)
+  - [Elastic Load Balancer](#elastic-load-balancer)
+  - [Application Load balancing (ALB) vs Network Load Balancing (NLB)](#application-load-balancing-alb-vs-network-load-balancing-nlb)
+  - [Launch Configuration and Templates](#launch-configuration-and-templates)
+  - [Auto-Scaling Groups](#auto-scaling-groups)
+  - [ASG Scaling Policies](#asg-scaling-policies)
+  - [ASG Lifecycle Hooks](#asg-lifecycle-hooks)
+  - [ASG HealthCheck Comparison - EC2 vs ELB](#asg-healthcheck-comparison---ec2-vs-elb)
+  - [SSL Offload & Session Stickiness](#ssl-offload--session-stickiness)
+  - [Gateway Load Balancer](#gateway-load-balancer)
+- [SERVERLESS AND APPLICATION SERVICES](#serverless-and-application-services)
+  - [Architecture Deep Dive - PART1 and PART2](#architecture-deep-dive---part1-and-part2)
+  - [AWS Lambda](#aws-lambda)
+  - [CloudWatchEvents and EventBridge](#cloudwatchevents-and-eventbridge)
+  - [Serverless Architecture](#serverless-architecture)
+  - [Simple Notification Service](#simple-notification-service)
+  - [Step Functions](#step-functions)
+  - [API Gateway](#api-gateway)
+  - [Simple Queue Service](#simple-queue-service)
+  - [Kinesis Data Streams](#kinesis-data-streams)
 
 <!-- /TOC -->
 
-# Theory and AWS docs
 
-x
-x
-x
-x
-x
-x
 
-<!-- #########################################
+<!-- 
+
+#########################################
 
 temlpate:
 
@@ -63,7 +78,9 @@ ___
 
 - []()
 
-######################################### -->
+######################################### 
+
+-->
 
 # Route 53 - Global DNS
 
@@ -511,4 +528,353 @@ EFS can play an essential part in building scalable and resilient syste
 
 - https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html
 
+
+
+# HA & SCALING
+
+___
+
+## Regional and Global AWS Architecture
+
+This lesson steps through the high level components and considerations of AWS architecture.
+
+It introduces global and regional perspectives and the tiers or components which make up most applications.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048264
+
+**AWS docs:** 
+
+- [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+
+
+___
+
+## Elastic Load Balancer
+
+The Elastic Load Balancer (ELB) was introduced in 2009 with the 'now called' Classic Load Balancer
+
+Two new versions the v2 Application and v2 Network load balancers are now the recommended solutions.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048303
+- https://learn.cantrill.io/courses/730712/lectures/36048304
+- https://learn.cantrill.io/courses/730712/lectures/36048305
+
+**AWS docs:** 
+
+- [What is an Application Load Balancer?](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+
+___
+
+## Application Load balancing (ALB) vs Network Load Balancing (NLB)
+
+This lesson steps through the main features and some important considerations when using Application Load Balancers and Network Load Balancers
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048307
+
+**AWS docs:** 
+
+- [Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
+
+___
+
+## Launch Configuration and Templates
+
+Launch Configurations and Launch Templates provide the WHAT to Auto scaling groups.
+
+They define WHAT gets provisioned
+
+The AMI, the Instance Type, the networking & security, the key pair to use, the userdata to inject and IAM Role to attach.
+
+This lesson steps through briefly how they both work.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048308
+
+**AWS docs:** 
+
+- [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
+- [Launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html)
+
+___
+
+## Auto-Scaling Groups
+
+An Auto Scaling group contains a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. An Auto Scaling group also enables you to use Amazon EC2 Auto Scaling features such as health check replacements and scaling policies. Both maintaining the number of instances in an Auto Scaling group and automatic scaling are the core functionality of the Amazon EC2 Auto Scaling service.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048316
+
+**AWS docs:** 
+
+- [Auto Scaling groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
+
+___
+
+## ASG Scaling Policies
+
+With step scaling and simple scaling, you choose scaling metrics and threshold values for the CloudWatch alarms that trigger the scaling process. You also define how your Auto Scaling group should be scaled when a threshold is in breach for a specified number of evaluation periods.
+
+Step scaling policies and simple scaling policies are two of the dynamic scaling options available for you to use. Both require you to create CloudWatch alarms for the scaling policies. Both require you to specify the high and low thresholds for the alarms. Both require you to define whether to add or remove instances, and how many, or set the group to an exact size. 
+
+The main difference between the policy types is the step adjustments that you get with step scaling policies. When step adjustments are applied, and they increase or decrease the current capacity of your Auto Scaling group, the adjustments vary based on the size of the alarm breach.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048317
+
+**AWS docs:** 
+
+- [Step and simple scaling policies for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html)
+
+___
+
+## ASG Lifecycle Hooks
+
+Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. When an instance is paused, it remains in a wait state either until you complete the lifecycle action using the complete-lifecycle-action command or the ```CompleteLifecycleAction``` operation, or until the timeout period ends (one hour by default).
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048319
+
+**AWS docs:** 
+
+- [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html)
+
+___
+
+## ASG HealthCheck Comparison - EC2 vs ELB
+
+Amazon EC2 Auto Scaling can determine the health status of an instance using one or more of the following:
+
+- Status checks provided by Amazon EC2 to identify hardware and software issues that may impair an instance. The default health checks for an Auto Scaling group are EC2 status checks only.
+
+- Health checks provided by Elastic Load Balancing (ELB). These health checks are disabled by default but can be enabled.
+
+- Your custom health checks.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36048320
+
+**AWS docs:** 
+
+- [Add Elastic Load Balancing health checks to an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-elb-healthcheck.html)
+- [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+
+__
+
+## SSL Offload & Session Stickiness
+
+This lesson steps through 3 different ways that ELB's can handle SSL
+
+SSL Bridging
+SSL Pass Through
+SSL Offloading
+Additionally the lesson steps through what session stickiness means, and why it matters to the solutions we design as solutions architects.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15828867
+
+**AWS docs:** 
+
+- [Configure sticky sessions for your Classic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html)
+- [Sticky sessions for your Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html)
+  
+
+___
+
+## Gateway Load Balancer
+
+Gateway Load Balancers enable you to deploy, scale, and manage virtual appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems. It combines a transparent network gateway (that is, a single entry and exit point for all traffic) and distributes traffic while scaling your virtual appliances with the demand.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/34350240
+
+**AWS docs:** 
+
+- [What is a Gateway Load Balancer?](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html)
+
+
+
+# SERVERLESS AND APPLICATION SERVICES
+
+___
+
+## Architecture Deep Dive - PART1 and PART2
+
+In PART1 of this lesson I step through how a video uploading architecture 'CatTube' can be evolved from monolithic to tiered.
+
+Part 2 continues by looking at evolutions using a queue based design, to achieve improved asynchronous communications and scaling and finishes by looking at microservices and event driven architectures.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15190436
+- https://learn.cantrill.io/courses/730712/lectures/15190450
+
+**AWS docs:** 
+
+- [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
+
+___
+
+## AWS Lambda
+
+This 3-part series steps through Lambdas architecture and features in depth.
+
+Part 1 is a refresher of the topics covered at an associate level with some additional detail
+
+Part 2 looks at public & VPC networking, security and logging
+
+Part 3 looks at invocation modes, versions & aliases, Latency, destinations and execution context
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049038
+- https://learn.cantrill.io/courses/730712/lectures/36049039
+- https://learn.cantrill.io/courses/730712/lectures/36049040
+
+**AWS docs:** 
+
+- [Lambda instruction set architectures](https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html)
+
+___
+
+## CloudWatchEvents and EventBridge
+
+CloudWatch Events and EventBridge have visibility over events generated by supported AWS services within an account.
+
+They can monitor the default account event bus - and pattern match events flowing through and deliver these events to multiple targets.
+
+They are also the source of scheduled events which can perform certain actions at certain times of day, days of the week, or multiple combinations of both - using the Unix CRON time expression format.
+
+Both services are one way how event driven architectures can be implemented within AWS.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15191500
+
+**AWS docs:** 
+
+- [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
+
+- [What Is Amazon EventBridge?](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+
+
+___
+ 
+## Serverless Architecture
+
+The Serverless architecture is a evolution/combination of other popular architectures such as event-driven and microservices.
+
+It aims to use 3rd party services where possible and FAAS products for any on-demand computing needs.
+
+Using a serverless architecture means little to no base costs for an environment - and any cost incurred during operations scale in a way with matches the incoming load.
+
+Serverless starts to feature more and more on the AWS exams - so its a critical architecture to understand.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15267917
+
+**AWS docs:** 
+
+- [AWS Serverless Multi-Tier Architectures with Amazon API Gateway and AWS Lambda](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/welcome.html)
+
+___
+ 
+## Simple Notification Service
+
+The Simple Notification Service or SNS .. is a PUB SUB style notification system which is used within AWS products and services but can also form an essential part of serverless, event-driven and traditional application architectures.
+
+Publishers send messages to TOPICS
+
+Subscribers receive messages SENT to TOPICS.
+
+SNS supports a wide variety of subscriber types including other AWS services such as LAMBDA and SQS
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15267920
+
+**AWS docs:** 
+
+- [What is Amazon SNS?](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+
+___
+ 
+## Step Functions
+
+Step functions is a product which lets you build long running serverless workflow based applications within AWS which integrate with many AWS services.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15267923
+
+**AWS docs:** 
+
+- [What is AWS Step Functions?](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html)
+
+___
+ 
+## API Gateway
+
+API Gateway is a managed service from AWS which allows the creation of API Endpoints, Resources & Methods.
+
+The API gateway integrates with other AWS services - and can even access some without the need for dedicated compute.
+
+It serves as a core component of many serverless architectures using Lambda as event-driven and on-demand backing for methods.
+
+It can also connect to legacy monolithic applications and act as a stable API endpoint during an evolution from a monolith to microservices and potentially through to serverless.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15267912
+
+**AWS docs:** 
+
+- [What is Amazon API Gateway?](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
+
+___
+ 
+## Simple Queue Service
+
+SQS queues are a managed message queue service in AWS which help to decouple application components, allow Asynchronous messaging or the implementation of worker pools.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15267945
+
+**AWS docs:** 
+
+- [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
+
+___
+ 
+## Kinesis Data Streams
+
+Kinesis data streams are a streaming service within AWS designed to ingest large quantities of data and allow access to that data for consumers.
+
+Kinesis is ideal for dashboards and large scale real time analytics needs.
+
+Kinesis data firehose allows the long term persistent storage of kinesis data onto services like S3
+
+This lesson ends by evaluating the differences between SQS and Kinesis, and identifying key factors in exam questions which suggest picking one vs the other.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049059
+
+**AWS docs:** 
+
+- [What Is Amazon Kinesis Data Streams?](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
 

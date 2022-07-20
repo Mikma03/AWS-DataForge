@@ -81,7 +81,6 @@
 - https://learn.cantrill.io/courses/730712/lectures/14760364
 
 
-
 ################################################
 # Route 53 - Global DNS
 ################################################
@@ -110,7 +109,6 @@
 **Exam questions appears based on this lecture**
 - Geolocation Routing
 - https://learn.cantrill.io/courses/730712/lectures/28015269
-
 
 
 ################################################
@@ -143,7 +141,6 @@
 - https://learn.cantrill.io/courses/730712/lectures/15747976
 
 
-
 ################################################
 # NETWORK STORAGE & DATA LIFECYCLE
 ################################################
@@ -153,3 +150,63 @@
 - EFS Architecture
 - https://learn.cantrill.io/courses/730712/lectures/14990550
 
+
+################################################
+# HA & SCALING
+################################################
+
+
+**Exam questions appears based on this lecture**
+- Elastic Load Balancer Architecture - PART1 & PART2
+- https://learn.cantrill.io/courses/730712/lectures/36048304
+- https://learn.cantrill.io/courses/730712/lectures/36048305
+
+
+**Exam questions appears based on this lecture**
+- Auto-Scaling Groups
+- https://learn.cantrill.io/courses/730712/lectures/36048316
+
+
+**Exam questions appears based on this lecture**
+- ASG HealthCheck Comparison - EC2 vs ELB
+- https://learn.cantrill.io/courses/730712/lectures/36048320
+
+
+**Exam questions appears based on this lecture**
+- SSL Offload & Session Stickiness
+- https://learn.cantrill.io/courses/730712/lectures/15828867
+
+
+################################################
+# SERVERLESS AND APPLICATION SERVICES
+################################################
+
+
+**Exam questions appears based on this lecture**
+- AWS Lambda - PART2
+- https://learn.cantrill.io/courses/730712/lectures/36049039
+
+
+**Exam questions appears based on this lecture**
+- AWS Lambda - PART3
+- https://learn.cantrill.io/courses/730712/lectures/36049040
+
+
+**Exam questions appears based on this lecture**
+- Serverless Architecture
+- https://learn.cantrill.io/courses/730712/lectures/15267917
+
+
+**Exam questions appears based on this lecture**
+- Simple Notification Service
+- https://learn.cantrill.io/courses/730712/lectures/15267920
+
+
+**Exam questions appears based on this lecture**
+- API Gateway
+- https://learn.cantrill.io/courses/730712/lectures/15267912
+
+
+**Exam questions appears based on this lecture**
+- Simple Queue Service
+- https://learn.cantrill.io/courses/730712/lectures/15267945
