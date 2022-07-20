@@ -16,6 +16,7 @@
 - [NETWORK STORAGE & DATA LIFECYCLE](#network-storage--data-lifecycle)
 - [HA & SCALING](#ha--scaling)
 - [SERVERLESS AND APPLICATION SERVICES](#serverless-and-application-services)
+- [GLOBAL CONTENT DELIVERY AND OPTIMIZATION](#global-content-delivery-and-optimization)
 
 <!-- /TOC -->
 
@@ -696,7 +697,11 @@
 - [AdvancedDemo] Architecture Evolution - STAGE4
   - https://learn.cantrill.io/courses/730712/lectures/29852552
 
+- [AdvancedDemo] Architecture Evolution - STAGE 5 - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/29852554
 
+- [AdvancedDemo] Architecture Evolution - STAGE6
+  - https://learn.cantrill.io/courses/730712/lectures/29852558
 
 - Gateway Load Balancer
   - https://learn.cantrill.io/courses/730712/lectures/34350240
@@ -742,12 +747,51 @@
 - API Gateway
   - https://learn.cantrill.io/courses/730712/lectures/15267912
 
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15267931
 
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15267939
 
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART3
+  - https://learn.cantrill.io/courses/730712/lectures/15267940
 
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART4
+  - https://learn.cantrill.io/courses/730712/lectures/15267942
 
 - Simple Queue Service
   - https://learn.cantrill.io/courses/730712/lectures/15267945
 
 - Kinesis Data Streams
   - https://learn.cantrill.io/courses/730712/lectures/36049059
+
+- Kinesis Data Firehose
+  - https://learn.cantrill.io/courses/730712/lectures/36049060
+
+- Kinesis Data Analytics
+  - https://learn.cantrill.io/courses/730712/lectures/36049063
+
+- Amazon Cognito - User and Identity Pools
+  - https://learn.cantrill.io/courses/730712/lectures/32121076
+
+
+# GLOBAL CONTENT DELIVERY AND OPTIMIZATION
+
+
+- Cloudfront Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/36049951
+
+- Cloudfront Behaviours
+  - https://learn.cantrill.io/courses/730712/lectures/36049952
+
+- CF TTL and Invalidations
+  - https://learn.cantrill.io/courses/730712/lectures/36049953
+
+- ACM
+  - https://learn.cantrill.io/courses/730712/lectures/15356375
+
+- Cloudfront and SSL/TLS
+  - https://learn.cantrill.io/courses/730712/lectures/36049954
+
+- Origin Types & Origin Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/36049955

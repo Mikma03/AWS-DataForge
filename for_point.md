@@ -83,3 +83,8 @@ https://aws.amazon.com/emr/?c=a&sec=srv
 
 Amazon Athena
 https://aws.amazon.com/athena/?c=a&sec=srv&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
+
+
+
+############### dane alternatywne
+https://www.linkedin.com/company/banachastreet/

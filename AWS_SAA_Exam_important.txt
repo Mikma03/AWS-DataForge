@@ -210,3 +210,25 @@
 **Exam questions appears based on this lecture**
 - Simple Queue Service
 - https://learn.cantrill.io/courses/730712/lectures/15267945
+
+
+
+################################################
+# GLOBAL CONTENT DELIVERY AND OPTIMIZATION
+################################################
+
+
+**Exam questions appears based on this lecture**
+- Cloudfront Architecture
+- https://learn.cantrill.io/courses/730712/lectures/36049951
+
+
+**Exam questions appears based on this lecture**
+- CF TTL and Invalidations
+- https://learn.cantrill.io/courses/730712/lectures/36049953
+
+
+**Exam questions appears based on this lecture**
+- Cloudfront and SSL/TLS
+- https://learn.cantrill.io/courses/730712/lectures/36049954
+

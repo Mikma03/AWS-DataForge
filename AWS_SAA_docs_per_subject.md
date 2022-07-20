@@ -53,6 +53,16 @@
   - [API Gateway](#api-gateway)
   - [Simple Queue Service](#simple-queue-service)
   - [Kinesis Data Streams](#kinesis-data-streams)
+  - [Kinesis Data Firehose](#kinesis-data-firehose)
+  - [Kinesis Data Analytics](#kinesis-data-analytics)
+  - [Amazon Cognito - User and Identity Pools](#amazon-cognito---user-and-identity-pools)
+- [GLOBAL CONTENT DELIVERY AND OPTIMIZATION](#global-content-delivery-and-optimization)
+  - [Cloudfront Architecture](#cloudfront-architecture)
+  - [Cloudfront Behaviours](#cloudfront-behaviours)
+  - [CF TTL and Invalidations](#cf-ttl-and-invalidations)
+  - [ACM](#acm)
+  - [Cloudfront and SSL/TLS](#cloudfront-and-ssltls)
+  - [Origin Types & Origin Architecture](#origin-types--origin-architecture)
 
 <!-- /TOC -->
 
@@ -877,4 +887,165 @@ This lesson ends by evaluating the differences between SQS and Kinesis, and iden
 **AWS docs:** 
 
 - [What Is Amazon Kinesis Data Streams?](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
+
+___
+ 
+## Kinesis Data Firehose
+
+Kinesis Data Firehose is a stream based delivery service capable of delivering high throughput streaming data to supported destinations in near realtime.
+
+Its a member of the kinesis family and for the PRO level exam it's critical to have a good understanding of how it functions in isolation and how it integrates with AWS products and services.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049060
+
+**AWS docs:** 
+
+- [What Is Amazon Kinesis Data Firehose?](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
+
+___
+ 
+## Kinesis Data Analytics
+
+Amazon Kinesis Data Analytics is the easiest way to analyze streaming data, gain actionable insights, and respond to your business and customer needs in real time.
+
+it is part of the kinesis family of products and is capable of operating in realtime on high throughput streaming data.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049063
+
+**AWS docs:** 
+
+- [What Is Amazon Kinesis Data Analytics for SQL Applications?](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html)
+
+___
+ 
+## Amazon Cognito - User and Identity Pools
+
+A user pool is a user directory in Amazon Cognito. With a user pool, your users can sign in to your web or mobile app through Amazon Cognito. Your users can also sign in through social identity providers like Google, Facebook, Amazon, or Apple, and through SAML identity providers. Whether your users sign in directly or through a third party, all members of the user pool have a directory profile that you can access through a Software Development Kit (SDK).
+
+Amazon Cognito identity pools (federated identities) enable you to create unique identities for your users and federate them with identity providers. With an identity pool, you can obtain temporary, limited-privilege AWS credentials to access other AWS services. 
+
+This lesson reviews the features of the product and talks through some example architectures.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/32121076
+
+**AWS docs:** 
+
+- [What is Amazon Cognito?](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html)
+
+
+
+# GLOBAL CONTENT DELIVERY AND OPTIMIZATION
+
+
+___
+ 
+## Cloudfront Architecture
+
+CloudFront is a Content Delivery network (CDN) within AWS.
+
+This lesson steps through the basic architecture
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049951
+
+**AWS docs:** 
+
+- [What is Amazon CloudFront?](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+
+
+___
+ 
+## Cloudfront Behaviours
+
+CloudFront Behaviours control much of the TTL, protocol and privacy settings within CloudFront
+
+This lesson steps through settings configured at a distribution level and those settings which apply to a distribution
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049952
+
+**AWS docs:** 
+
+- [What is Amazon CloudFront?](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+
+___
+ 
+## CF TTL and Invalidations
+
+This lesson steps through how CloudFront handles object expiry and invalidation
+
+Covering
+
+Default TTL, Minimum TTL, Maximum TTL
+
+And Cache Invalidation
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049953
+
+**AWS docs:** 
+
+- [How CloudFront processes and caches HTTP 4xx and 5xx status codes from your origin](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html)
+
+___
+ 
+## ACM
+
+The AWS certificate Manage is a service which allows the creation, management and renewal of certificates. It allows deployment of certificates onto supported AWS services such as CloudFront and ALB.
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15356375
+
+**AWS docs:** 
+
+- [What Is AWS Certificate Manager?](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html)
+
+___
+ 
+## Cloudfront and SSL/TLS
+
+Understanding CloudFront and SSL is essential for the exam
+
+This lesson steps through the certificate requirements for the viewer and origin side and steps through the reasons for SNI, and how it works.
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049954
+
+**AWS docs:** 
+
+- [Requirements for using SSL/TLS certificates with CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html)
+
+___
+ 
+## Origin Types & Origin Architecture
+
+CloudFront origins store content distributed via edge locations.
+
+The features available differ based on using S3 origins vs Custom origins
+
+Supported SSL/TLS protocols and ciphers for communication between viewers and CloudFront
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/36049955
+
+**AWS docs:** 
+
+- [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html)
+- [Supported protocols and ciphers between viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html#secure-connections-supported-ciphers)
 

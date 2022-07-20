@@ -1,7 +1,7 @@
 
 <!-- TOC -->
 
-- [AWS Certified Cloud Practitioner exam CLF-C01](#aws-certified-cloud-practitioner-exam-clf-c01)
+- [AWS Certified Cloud Practitioner exam (CLF-C01)](#aws-certified-cloud-practitioner-exam-clf-c01)
 - [GCP Associate Cloud Engineer](#gcp-associate-cloud-engineer)
 - [Google Cloud Cloud Digital Leader](#google-cloud-cloud-digital-leader)
 - [Google Cloud - Professional Cloud Architect](#google-cloud---professional-cloud-architect)
@@ -9,8 +9,8 @@
 - [AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill](#aws---saa---dedicated-repo-on-github---adrian-cantrill)
 - [AWS - Slack - Adrian Cantrill](#aws---slack---adrian-cantrill)
 - [AWS - mini projects - Adrian Cantrill](#aws---mini-projects---adrian-cantrill)
-    - [Description](#description)
-    - [GitHub](#github)
+  - [Description](#description)
+  - [GitHub](#github)
 - [SAA additionals reading - external resources](#saa-additionals-reading---external-resources)
 - [AWS Cheat Sheets](#aws-cheat-sheets)
 
@@ -89,6 +89,8 @@ https://www.linkedin.com/posts/adriancantrill_were-coming-up-to-the-weekend-the-
 # SAA additionals reading - external resources
 
 - https://github.com/keenanromain/AWS-SAA-C02-Study-Guide
+
+- https://github.com/alozano-77/AWS-SAA-C02-Course
 
 
 # AWS Cheat Sheets
