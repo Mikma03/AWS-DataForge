@@ -795,3 +795,18 @@
 
 - Origin Types & Origin Architecture
   - https://learn.cantrill.io/courses/730712/lectures/36049955
+
+
+
+
+- Securing CF and S3 using OAI
+  - https://learn.cantrill.io/courses/730712/lectures/15356377
+
+- [DEMO] Using Origin Access Identity (OAI)
+  - https://learn.cantrill.io/courses/730712/lectures/15356378
+
+- Lambda@Edge
+  - https://learn.cantrill.io/courses/730712/lectures/22696404
+
+- Global Accelerator
+  - https://learn.cantrill.io/courses/730712/lectures/22696404

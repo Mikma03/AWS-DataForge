@@ -63,6 +63,9 @@
   - [ACM](#acm)
   - [Cloudfront and SSL/TLS](#cloudfront-and-ssltls)
   - [Origin Types & Origin Architecture](#origin-types--origin-architecture)
+  - [Securing CF and S3 using OAI](#securing-cf-and-s3-using-oai)
+  - [Lambda@Edge](#lambdaedge)
+  - [Global Accelerator](#global-accelerator)
 
 <!-- /TOC -->
 
@@ -1049,3 +1052,57 @@ Supported SSL/TLS protocols and ciphers for communication between viewers and Cl
 - [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html)
 - [Supported protocols and ciphers between viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html#secure-connections-supported-ciphers)
 
+___
+ 
+## Securing CF and S3 using OAI
+
+Origin Access Identities are a feature where virtual identities can be created, associated with a CloudFront Distribution and deployed to edge locations.
+
+Access to an s3 bucket can be controlled by using these OAI's - allowing access from an OAI, and using an implicit DENY for everything else.
+
+They are generally used to ensure no direct access to S3 objects is allowed when using private CF Distributions.
+
+This lesson covers the main ways to secure origins from direct access (bypassing CloudFront)
+
+- Origin Access identities (OAI) - for S3 Origins
+- Custom Headers - For Custom Origins
+- IP Based FW Blocks - For Custom Origins.
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15356377
+
+**AWS docs:** 
+
+- [Restricting access to Amazon S3 content by using an origin access identity (OAI)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
+
+___
+ 
+## Lambda@Edge
+
+Lambda@Edge allows cloudfront to run lambda function at CloudFront edge locations to modify traffic between the viewer and edge location and edge locations and origins.
+
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/22696404
+
+**AWS docs:** 
+
+- [Personalize content by country or device type headers - examples](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples)
+
+
+___
+
+## Global Accelerator
+
+AWS Global Accelerator is designed to improve global network performance by offering entry point onto the global AWS transit network as close to customers as possible using ANycast IP addresses
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/730712/lectures/15790988
+
+**AWS docs:** 
+
+- [What is AWS Global Accelerator?](https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html)

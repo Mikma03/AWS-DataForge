@@ -232,3 +232,12 @@
 - Cloudfront and SSL/TLS
 - https://learn.cantrill.io/courses/730712/lectures/36049954
 
+
+**Exam questions appears based on this lecture**
+- Lambda@Edge
+- https://learn.cantrill.io/courses/730712/lectures/22696404
+
+
+**Exam questions appears based on this lecture**
+- Global Accelerator
+- https://learn.cantrill.io/courses/730712/lectures/22696404
