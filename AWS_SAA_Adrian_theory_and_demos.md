@@ -1,6 +1,7 @@
 
 <!-- TOC -->
 
+- [INTRODUCTION & SCENARIO](#introduction--scenario)
 - [AWS Accounts](#aws-accounts)
 - [Cloud Computing Fundamentals](#cloud-computing-fundamentals)
 - [Tech Fundamentals - Network](#tech-fundamentals---network)
@@ -17,9 +18,21 @@
 - [HA & SCALING](#ha--scaling)
 - [SERVERLESS AND APPLICATION SERVICES](#serverless-and-application-services)
 - [GLOBAL CONTENT DELIVERY AND OPTIMIZATION](#global-content-delivery-and-optimization)
+- [ADVANCED VPC Networking](#advanced-vpc-networking)
+- [HYBRID ENVIRONMENTS AND MIGRATION](#hybrid-environments-and-migration)
+- [SECURITY, DEPLOYMENT & OPERATIONS](#security-deployment--operations)
+- [Infrastructure as Code (CloudFormation)](#infrastructure-as-code-cloudformation)
+- [NOSQL Databases & DynamoDB](#nosql-databases--dynamodb)
 
 <!-- /TOC -->
 
+# INTRODUCTION & SCENARIO
+
+- Finding and Using the Course Resources
+  - https://learn.cantrill.io/courses/730712/lectures/14040874
+
+- AWS Exams
+  - https://learn.cantrill.io/courses/730712/lectures/14040871
 
 # AWS Accounts
 
@@ -43,6 +56,9 @@
 
 - Adding an IAM Admin - GENERAL ACCOUNT
   - https://learn.cantrill.io/courses/730712/lectures/24950119
+
+- Adding an IAM Admin User - PRODUCTION ACCOUNT
+  - https://learn.cantrill.io/courses/730712/lectures/24950120
 
 - IAM Access Keys
   - https://learn.cantrill.io/courses/730712/lectures/24950121
@@ -759,6 +775,12 @@
 - [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART4
   - https://learn.cantrill.io/courses/730712/lectures/15267942
 
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART5
+  - https://learn.cantrill.io/courses/730712/lectures/15267943
+
+- [AdvancedDemo] Build A Serverless App - Pet-Cuddle-o-Tron - PART6
+  - https://learn.cantrill.io/courses/730712/lectures/29903437
+
 - Simple Queue Service
   - https://learn.cantrill.io/courses/730712/lectures/15267945
 
@@ -796,8 +818,14 @@
 - Origin Types & Origin Architecture
   - https://learn.cantrill.io/courses/730712/lectures/36049955
 
+- [DEMO] Adding a CDN to a static Website using S3 and CloudFront - Part 1
+  - https://learn.cantrill.io/courses/730712/lectures/15356376
 
+- [DEMO] Adding a CDN to a static Website using S3 and CloudFront - Part 2
+  - https://learn.cantrill.io/courses/730712/lectures/15530611
 
+- [DEMO] Adding an Alternate CNAME and SSL to CloudFront
+  - https://learn.cantrill.io/courses/730712/lectures/15530621
 
 - Securing CF and S3 using OAI
   - https://learn.cantrill.io/courses/730712/lectures/15356377
@@ -810,3 +838,220 @@
 
 - Global Accelerator
   - https://learn.cantrill.io/courses/730712/lectures/22696404
+
+
+# ADVANCED VPC Networking
+
+- VPC Flow Logs
+  - https://learn.cantrill.io/courses/730712/lectures/15443338
+
+- Egress-Only Internet gateway
+  - https://learn.cantrill.io/courses/730712/lectures/15443339
+
+- VPC Endpoints (Gateway)
+  - https://learn.cantrill.io/courses/730712/lectures/15443340
+
+- VPC Endpoints (Interface)
+  - https://learn.cantrill.io/courses/730712/lectures/15443341
+
+- [DEMO] Gateway Endpoint - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15443343
+
+- [DEMO] Interface Endpoints - part2
+  - https://learn.cantrill.io/courses/730712/lectures/15443344
+
+- [DEMO] Egress-Only Internet Gateway - PART3
+  - https://learn.cantrill.io/courses/730712/lectures/15443345
+
+-  VPC Peering
+   -  https://learn.cantrill.io/courses/730712/lectures/15443346
+
+
+# HYBRID ENVIRONMENTS AND MIGRATION
+
+- Border Gateway Protocol 101
+  - https://learn.cantrill.io/courses/730712/lectures/20129430
+
+- AWS Site-to-Site VPN
+  - https://learn.cantrill.io/courses/730712/lectures/15532724
+
+- [DEMO] VPC and On-premises VPN - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15532728
+
+- [DEMO] VPC and On-premises VPN - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15694105
+
+- Direct Connect
+  - https://learn.cantrill.io/courses/730712/lectures/15532730
+
+- Direct Connect Resilience
+  - https://learn.cantrill.io/courses/730712/lectures/24660629
+
+- Transit Gateway
+  - https://learn.cantrill.io/courses/730712/lectures/15532731
+
+- [DEMO] Implementing Advanced Hybrid Networking using Transit gateway - PART1
+   -  https://learn.cantrill.io/courses/730712/lectures/15749718
+
+- [DEMO] Implementing Advanced Hybrid Networking using Transit gateway - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15749728
+
+- Storage gateway
+  - https://learn.cantrill.io/courses/730712/lectures/15532734
+
+- Snowball / Edge / Snowmobile
+  - https://learn.cantrill.io/courses/730712/lectures/15532735
+
+- Directory Service
+  - https://learn.cantrill.io/courses/730712/lectures/15690951
+
+- DataSync
+  - https://learn.cantrill.io/courses/730712/lectures/15690952
+
+- FSx for Windows Servers
+  - https://learn.cantrill.io/courses/730712/lectures/15749267
+
+- FSx For Lustre
+  - https://learn.cantrill.io/courses/730712/lectures/22586267
+
+
+# SECURITY, DEPLOYMENT & OPERATIONS
+
+- AWS Secrets Manager
+  - https://learn.cantrill.io/courses/730712/lectures/15793908
+
+- AWS WAF & Shield
+  - https://learn.cantrill.io/courses/730712/lectures/15792890
+
+- CloudHSM
+  - https://learn.cantrill.io/courses/730712/lectures/15828633
+
+- AWS Config
+  - https://learn.cantrill.io/courses/730712/lectures/30035588
+
+- Amazon Macie
+  - https://learn.cantrill.io/courses/730712/lectures/30036454
+
+- Amazon Inspector
+  - https://learn.cantrill.io/courses/730712/lectures/36408324
+
+- Amazon Guardduty
+  - https://learn.cantrill.io/courses/730712/lectures/36408326
+
+
+# Infrastructure as Code (CloudFormation)
+
+- CloudFormation Physical & Logical Resources
+  - https://learn.cantrill.io/courses/730712/lectures/36204848
+
+- [DEMO] Simple Non Portable Template - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36204861
+
+- [DEMO] Simple Non Portable Template - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36204863
+
+- CloudFormation Template and Pseudo Parameters
+  - https://learn.cantrill.io/courses/730712/lectures/36204864
+
+- CloudFormation Intrinsic Functions
+  - https://learn.cantrill.io/courses/730712/lectures/36204866
+
+- CloudFormation Mappings
+  - https://learn.cantrill.io/courses/730712/lectures/36204867
+
+- CloudFormation Outputs
+  - https://learn.cantrill.io/courses/730712/lectures/36204868
+
+- [DEMO] Template v2 - Portable
+  - https://learn.cantrill.io/courses/730712/lectures/36204871
+
+- CloudFormation Conditions
+  - https://learn.cantrill.io/courses/730712/lectures/36204873
+
+- CloudFormation DependsOn
+  - https://learn.cantrill.io/courses/730712/lectures/36204875
+
+- CloudFormation Wait Conditions & cfn-signal
+  - https://learn.cantrill.io/courses/730712/lectures/36204877
+
+- CloudFormation Nested Stacks
+  - https://learn.cantrill.io/courses/730712/lectures/36204881
+
+- CloudFormation Cross-Stack References
+  - https://learn.cantrill.io/courses/730712/lectures/36204883
+
+- CloudFormation Stack Sets
+  - https://learn.cantrill.io/courses/730712/lectures/36204885
+
+- CloudFormation Deletion Policy
+  - https://learn.cantrill.io/courses/730712/lectures/36204886
+
+- CloudFormation Stack Roles
+  - https://learn.cantrill.io/courses/730712/lectures/36204888
+
+- CloudFormation Init (CFN-INIT)
+  - https://learn.cantrill.io/courses/730712/lectures/36204891
+
+- CloudFormation cfn-hup
+  - https://learn.cantrill.io/courses/730712/lectures/36204895
+
+- [DEMO] wait conditions, cfnsignal, cfninit and cfnhup-PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36204896
+
+- [DEMO] wait conditions, cfnsignal, cfninit and cfnhup-PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36204897
+
+- [DEMO] CloudFormation ChangeSets
+  - https://learn.cantrill.io/courses/730712/lectures/36204900
+
+- CloudFormation Custom Resources
+  - https://learn.cantrill.io/courses/730712/lectures/36204902
+
+- [DEMO] CloudFormation Custom Resources-PART1
+  - https://learn.cantrill.io/courses/730712/lectures/36204903
+
+- [DEMO] CloudFormation Custom Resources-PART2
+  - https://learn.cantrill.io/courses/730712/lectures/36204906
+
+
+# NOSQL Databases & DynamoDB
+
+- DynamoDB - Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/15601347
+
+- DynamoDB - Operations, Consistency and Performance-PART1
+  - https://learn.cantrill.io/courses/730712/lectures/15601351
+
+- DynamoDB - Operations, Consistency and Performance-PART2
+  - https://learn.cantrill.io/courses/730712/lectures/15603829
+
+- DynamoDB Local and Global Secondary Indexes
+  - https://learn.cantrill.io/courses/730712/lectures/15662767
+
+- DynamoDB - Streams & Lambda Triggers
+  - https://learn.cantrill.io/courses/730712/lectures/15601352
+
+- DynamoDB - Global Tables
+  - https://learn.cantrill.io/courses/730712/lectures/15662768
+
+- DynamoDB - Accelerator (DAX)
+  - https://learn.cantrill.io/courses/730712/lectures/15662769
+
+- Amazon Athena
+  - https://learn.cantrill.io/courses/730712/lectures/15662776
+
+- [DEMO] Athena Demo - PART1
+  - https://learn.cantrill.io/courses/730712/lectures/17567378
+
+- [DEMO] Athena Demo - PART2
+  - https://learn.cantrill.io/courses/730712/lectures/17567380
+
+- Elasticache
+  - https://learn.cantrill.io/courses/730712/lectures/22586311
+
+- Redshift Architecture
+  - https://learn.cantrill.io/courses/730712/lectures/24160433
+
+- Redshift DR and Resilience
+  - https://learn.cantrill.io/courses/730712/lectures/24160434
+

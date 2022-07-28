@@ -241,3 +241,120 @@
 **Exam questions appears based on this lecture**
 - Global Accelerator
 - https://learn.cantrill.io/courses/730712/lectures/22696404
+
+
+
+################################################
+# ADVANCED VPC Networking
+################################################
+
+
+**Exam questions appears based on this lecture**
+- VPC Flow Logs
+- https://learn.cantrill.io/courses/730712/lectures/15443338
+
+
+**Exam questions appears based on this lecture**
+- Egress-Only Internet gateway
+- https://learn.cantrill.io/courses/730712/lectures/15443339
+
+
+**Exam questions appears based on this lecture**
+-  VPC Peering
+-  https://learn.cantrill.io/courses/730712/lectures/15443346
+
+
+
+################################################
+# HYBRID ENVIRONMENTS AND MIGRATION
+################################################
+
+
+**Exam questions appears based on this lecture**
+- AWS Site-to-Site VPN
+- https://learn.cantrill.io/courses/730712/lectures/15532724
+
+
+**Exam questions appears based on this lecture**
+- AWS Site-to-Site VPN
+- https://learn.cantrill.io/courses/730712/lectures/15532724
+
+
+**Exam questions appears based on this lecture**
+- DataSync
+- https://learn.cantrill.io/courses/730712/lectures/15690952
+
+
+**Exam questions appears based on this lecture**
+- FSx for Windows Servers
+- https://learn.cantrill.io/courses/730712/lectures/15749267
+
+
+**Exam questions appears based on this lecture**
+- FSx For Lustre
+- https://learn.cantrill.io/courses/730712/lectures/22586267
+
+
+################################################
+# SECURITY, DEPLOYMENT & OPERATIONS
+################################################
+
+
+**Exam questions appears based on this lecture**
+- AWS Secrets Manager
+- https://learn.cantrill.io/courses/730712/lectures/15793908
+
+
+**Exam questions appears based on this lecture**
+- Amazon Inspector
+- https://learn.cantrill.io/courses/730712/lectures/36408324
+
+
+################################################
+# Infrastructure as Code (CloudFormation)
+################################################
+
+
+**Exam questions appears based on this lecture**
+- CloudFormation Physical & Logical Resources
+- https://learn.cantrill.io/courses/730712/lectures/36204848
+
+
+**Exam questions appears based on this lecture**
+- CloudFormation Template and Pseudo Parameters
+- https://learn.cantrill.io/courses/730712/lectures/36204864
+
+
+**Exam questions appears based on this lecture**
+- CloudFormation Intrinsic Functions
+- https://learn.cantrill.io/courses/730712/lectures/36204866
+
+
+**Exam questions appears based on this lecture**
+- CloudFormation Stack Roles
+- https://learn.cantrill.io/courses/730712/lectures/36204888
+
+
+################################################
+# NOSQL Databases & DynamoDB
+################################################
+
+
+**Exam questions appears based on this lecture**
+- DynamoDB - Architecture
+- https://learn.cantrill.io/courses/730712/lectures/15601347
+
+
+**Exam questions appears based on this lecture**
+- DynamoDB Local and Global Secondary Indexes
+- https://learn.cantrill.io/courses/730712/lectures/15662767
+
+
+**Exam questions appears based on this lecture**
+- Elasticache
+- https://learn.cantrill.io/courses/730712/lectures/22586311
+
+
+**Exam questions appears based on this lecture**
+- Redshift Architecture
+- https://learn.cantrill.io/courses/730712/lectures/24160433

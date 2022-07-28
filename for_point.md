@@ -81,10 +81,14 @@ Big Data
 Amazon EMR
 https://aws.amazon.com/emr/?c=a&sec=srv
 
-Amazon Athena
-https://aws.amazon.com/athena/?c=a&sec=srv&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
-
-
 
 ############### dane alternatywne
 https://www.linkedin.com/company/banachastreet/
+
+
+# query data with Redishift Spectru 
+# query data from Athena for at hoc query - better than Redshift
+
+Amazon Athena
+https://aws.amazon.com/athena/?c=a&sec=srv&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
+
