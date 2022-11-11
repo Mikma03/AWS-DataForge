@@ -1,7 +1,7 @@
-
-
 <!-- TOC -->
 
+- [AWS Accounts](#aws-accounts)
+  - [Creating Access keys and setting up AWS CLI v2 tools](#creating-access-keys-and-setting-up-aws-cli-v2-tools)
 - [Cloud Computing Fundamentals](#cloud-computing-fundamentals)
   - [Cloud Computing - what is it...really](#cloud-computing---what-is-itreally)
   - [Public vs Private vs Multi vs Hybrid Cloud](#public-vs-private-vs-multi-vs-hybrid-cloud)
@@ -9,63 +9,84 @@
 - [Tech Fundamentals](#tech-fundamentals)
   - [YAML101 - YAML AINT MARKUP LANGUAGE](#yaml101---yaml-aint-markup-language)
   - [JSON101 - JavaScript Object Notation](#json101---javascript-object-notation)
-  - [Network Starter Pack - 0 - INTRO](#network-starter-pack---0---intro)
+  - [Encryption 101 - PART1 & PART2](#encryption-101---part1--part2)
+  - [Network Starter Pack](#network-starter-pack)
+  - [Network Starter Pack - EXTRA - Distributed Denial of Service (DDOS)](#network-starter-pack---extra---distributed-denial-of-service-ddos)
+  - [Secure Sockets Layer (SSL) and Transport Layer Security (TLS)](#secure-sockets-layer-ssl-and-transport-layer-security-tls)
+  - [Hash Functions & Hashing](#hash-functions--hashing)
+  - [Digital Signatures](#digital-signatures)
+  - [DNS 101 Miniseries](#dns-101-miniseries)
+  - [Recovery Point Objective (RPO) and Recovery Time Objective (RTO)](#recovery-point-objective-rpo-and-recovery-time-objective-rto)
 - [AWS Fundamentals](#aws-fundamentals)
   - [AWS Public vs Private Services](#aws-public-vs-private-services)
   - [AWS Global Infrastructure](#aws-global-infrastructure)
   - [AWS Default Virtual Private Cloud (VPC)](#aws-default-virtual-private-cloud-vpc)
   - [Elastic Compute Cloud (EC2) Basics](#elastic-compute-cloud-ec2-basics)
+  - [[DEMO] My First EC2 Instance - PART1 & PART 2](#demo-my-first-ec2-instance---part1--part-2)
   - [Simple Storage Service (S3) Basics](#simple-storage-service-s3-basics)
+  - [[DEMO] My First S3 Bucket](#demo-my-first-s3-bucket)
   - [CloudFormation (CFN) Basics](#cloudformation-cfn-basics)
+  - [[DEMO] Simple Automation With CFN](#demo-simple-automation-with-cfn)
   - [CloudWatch (CW) Basics](#cloudwatch-cw-basics)
+  - [[Demo] Simple Monitoring with Cloudwatch](#demo-simple-monitoring-with-cloudwatch)
   - [Shared Responsibility Model](#shared-responsibility-model)
   - [High-Availability vs Fault-Tolerance vs Disaster Recovery](#high-availability-vs-fault-tolerance-vs-disaster-recovery)
   - [Domain Name System (DNS) Fundamentals](#domain-name-system-dns-fundamentals)
-  - [High-Availability vs Fault-Tolerance vs Disaster Recovery](#high-availability-vs-fault-tolerance-vs-disaster-recovery-1)
   - [Route53 (R53) Fundamentals](#route53-r53-fundamentals)
+  - [[DEMO] Registering a Domain](#demo-registering-a-domain)
   - [DNS Record Types](#dns-record-types)
 - [IAM, ACCOUNTS AND AWS ORGANISATIONS](#iam-accounts-and-aws-organisations)
   - [IAM Identity Policies](#iam-identity-policies)
   - [IAM Users and ARNs](#iam-users-and-arns)
-  - [IAM Users and ARNs](#iam-users-and-arns-1)
+  - [[DEMO] Simple Identity Permissions in AWS](#demo-simple-identity-permissions-in-aws)
   - [IAM Groups](#iam-groups)
+  - [[DEMO] Permissions control using IAM Groups](#demo-permissions-control-using-iam-groups)
   - [IAM Roles - The Tech](#iam-roles---the-tech)
   - [When to use IAM Roles](#when-to-use-iam-roles)
   - [Service-linked Roles & PassRole](#service-linked-roles--passrole)
   - [AWS Organizations](#aws-organizations)
+  - [[DEMO] AWS Organizations - PART1 & 2](#demo-aws-organizations---part1--2)
   - [Service Control Policies (SCPs)](#service-control-policies-scps)
+  - [[DEMO] Using Service Control Policies](#demo-using-service-control-policies)
   - [CloudWatch Logs](#cloudwatch-logs)
   - [CloudTrail](#cloudtrail)
+  - [[DEMO] Implementing an Organizational Trail](#demo-implementing-an-organizational-trail)
+  - [AWS Control Tower 101](#aws-control-tower-101)
 - [SIMPLE STORAGE SERVICE (S3)](#simple-storage-service-s3)
   - [S3 Security (Resource Policies & ACLs)](#s3-security-resource-policies--acls)
-  - [S3 Security (Resource Policies & ACLs)](#s3-security-resource-policies--acls-1)
   - [S3 Static Hosting](#s3-static-hosting)
+  - [[Demo] Creating a static website with S3 - PART1 & PART 2](#demo-creating-a-static-website-with-s3---part1--part-2)
   - [S3 Object Versioning & MFA Delete](#s3-object-versioning--mfa-delete)
+  - [[DEMO] - S3 Versioning](#demo---s3-versioning)
   - [S3 Performance Optimization](#s3-performance-optimization)
-  - [S3 Performance Optimization](#s3-performance-optimization-1)
-  - [Encryption 101 - Part 1](#encryption-101---part-1)
-  - [Encryption 101 - Part 1 & 2](#encryption-101---part-1--2)
+  - [[DEMO] - S3 Performance](#demo---s3-performance)
   - [Key Management Service (KMS)](#key-management-service-kms)
   - [Object Encryption](#object-encryption)
   - [Key Management Service (KMS)](#key-management-service-kms-1)
+  - [[DEMO] KMS - Encrypting the battleplans with KMS](#demo-kms---encrypting-the-battleplans-with-kms)
+  - [Object Encryption](#object-encryption-1)
   - [S3 Object Storage Classes](#s3-object-storage-classes)
   - [S3 Lifecycle Configuration](#s3-lifecycle-configuration)
   - [S3 Replication](#s3-replication)
+  - [[DEMO] Cross-Region Replication of an S3 Static Website](#demo-cross-region-replication-of-an-s3-static-website)
   - [S3 PreSigned URLs](#s3-presigned-urls)
+  - [[DEMO] Creating and using PresignedURLs](#demo-creating-and-using-presignedurls)
   - [S3 Select and Glacier Select](#s3-select-and-glacier-select)
   - [S3 Events](#s3-events)
   - [S3 Access Logs](#s3-access-logs)
+  - [S3 Object Lock](#s3-object-lock)
 - [VIRTUAL PRIVATE CLOUD (VPC) BASICS](#virtual-private-cloud-vpc-basics)
   - [VPC Sizing and Structure](#vpc-sizing-and-structure)
   - [Custom VPCs](#custom-vpcs)
   - [VPC Subnets](#vpc-subnets)
+  - [[DEMO] Implement multi-tier VPC subnets](#demo-implement-multi-tier-vpc-subnets)
   - [VPC Routing, Internet Gateway & Bastion Hosts](#vpc-routing-internet-gateway--bastion-hosts)
-  - [VPC Routing, Internet Gateway & Bastion Hosts](#vpc-routing-internet-gateway--bastion-hosts-1)
+  - [[DEMO] Configuring A4l public subnets and Jumpbox](#demo-configuring-a4l-public-subnets-and-jumpbox)
   - [Stateful vs Stateless Firewalls](#stateful-vs-stateless-firewalls)
   - [Network Access Control Lists (NACLs)](#network-access-control-lists-nacls)
   - [Security Groups (SG)](#security-groups-sg)
   - [Network Address Translation (NAT) & NAT Gateway](#network-address-translation-nat--nat-gateway)
-  - [Network Address Translation (NAT) & NAT Gateway](#network-address-translation-nat--nat-gateway-1)
+  - [[DEMO] Implementing private internet access using NAT Gateways](#demo-implementing-private-internet-access-using-nat-gateways)
 - [ELASTIC COMPUTE CLOUD (EC2) BASICS](#elastic-compute-cloud-ec2-basics-1)
   - [Virtualization](#virtualization)
   - [EC2 Architecture and Resilience](#ec2-architecture-and-resilience)
@@ -209,7 +230,6 @@
 - [NOSQL Databases & DynamoDB](#nosql-databases--dynamodb)
   - [DynamoDB - Architecture](#dynamodb---architecture)
   - [DynamoDB - Operations, Consistency and Performance-PART1](#dynamodb---operations-consistency-and-performance-part1)
-  - [DynamoDB - Operations, Consistency and Performance-PART2](#dynamodb---operations-consistency-and-performance-part2)
   - [DynamoDB Local and Global Secondary Indexes](#dynamodb-local-and-global-secondary-indexes)
   - [DynamoDB - Streams & Lambda Triggers](#dynamodb---streams--lambda-triggers)
   - [DynamoDB - Global Tables](#dynamodb---global-tables)
@@ -218,11 +238,37 @@
   - [Elasticache](#elasticache)
   - [Redshift Architecture](#redshift-architecture)
   - [Redshift DR and Resilience](#redshift-dr-and-resilience)
+- [Machine Learning 101](#machine-learning-101)
+  - [Amazon Comprehend](#amazon-comprehend)
+  - [xxx](#xxx)
+  - [xxx](#xxx-1)
+  - [Amazon SageMaker](#amazon-sagemaker)
+- [Other Services & Features](#other-services--features)
+  - [AWS Local Zones](#aws-local-zones)
 
 <!-- /TOC -->
 
+# AWS Accounts
+
+---
+
+## Creating Access keys and setting up AWS CLI v2 tools
+
+In this Demo lesson - we step through how to generate access keys in the general and production AWS accounts and then use those as part of installing and configuring the AWS v2 CLI tools on windows, macOS and linux.
+
+AWS CLI v2 (Windows) Installation - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html
+
+AWS CLI v2 (macOS) Installation - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html
+
+AWS CLI v2 (Linux) Installation - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+
+**Link to video:**
+
+- hhttps://learn.cantrill.io/courses/1820301/lectures/41301468
+
 # Cloud Computing Fundamentals
-___
+
+---
 
 ## Cloud Computing - what is it...really
 
@@ -236,7 +282,7 @@ NIST Special Publication 800-145 : https://nvlpubs.nist.gov/nistpubs/Legacy/SP/n
 
 - https://learn.cantrill.io/courses/730712/lectures/14040936
 
-___
+---
 
 ## Public vs Private vs Multi vs Hybrid Cloud
 
@@ -252,7 +298,7 @@ This lesson steps through the key points of all four types of cloud.
 
 - https://learn.cantrill.io/courses/730712/lectures/14040943
 
-___
+---
 
 ## Cloud Service Models
 
@@ -262,21 +308,21 @@ It defines which parts of the infrastructure stack you are responsible for and w
 
 They define your unit of consumption - which is the thing you pay for.
 
-
 As a Service Model Examples : https://en.wikipedia.org/wiki/As_a_service
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14040947
 
-___
+---
 
 # Tech Fundamentals
-___
+
+---
 
 ## YAML101 - YAML AINT MARKUP LANGUAGE
 
-YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. 
+YAML (a recursive acronym for "YAML Ain't Markup Language") is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted.
 
 It's used within AWS as one of two supported CloudFormation Template formats
 
@@ -288,11 +334,11 @@ https://en.wikipedia.org/wiki/Recursive_acronym
 
 - https://learn.cantrill.io/courses/730712/lectures/27415250
 
-___
+---
 
 ## JSON101 - JavaScript Object Notation
 
-JavaScript Object Notation  is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types 
+JavaScript Object Notation is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types
 
 It's used within AWS as one of two CloudFormation template formats and for identity and resource policies.
 
@@ -302,9 +348,33 @@ This lesson is a high level introduction to JSON.
 
 - https://learn.cantrill.io/courses/730712/lectures/27415253
 
-___
+---
 
-## Network Starter Pack - 0 - INTRO
+## Encryption 101 - PART1 & PART2
+
+In part 1 of this lesson I step through the difference between encryption at rest, and encryption in transit.
+
+I discuss the high level components of encryption and provide definitions
+
+We look at Symmetric encryption - how it works, and what its limitations are
+
+and we finish by evaluation Asymmetric encryption and how it addresses these problems.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/42241184
+
+In Part 2 of this lesson I step through the process of signing - and how it can help to prove identity using Asymmetric keys
+
+and we finish up talking about steganography the processing of hiding data inside of something else.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/42241187
+
+---
+
+## Network Starter Pack
 
 This lesson series will step through the OSI 7-Layer Networking Model
 
@@ -321,62 +391,156 @@ https://en.wikipedia.org/wiki/OSI_model
 **Link to videos:**
 
 - Network Starter Pack - 0 - INTRO
+
   - https://learn.cantrill.io/courses/730712/lectures/25094903
 
 - Network Starter Pack - 1 - PHYSICAL
+
   - https://learn.cantrill.io/courses/730712/lectures/25094904
 
 - Network Starter Pack - 2 - Data Link - Part 1
+
   - https://learn.cantrill.io/courses/730712/lectures/25094906
 
 - Network Starter Pack - 2 - Data Link - Part 2
+
   - https://learn.cantrill.io/courses/730712/lectures/25094908
 
 - Decimal to Binary Conversion (IP Addressing)
+
   - https://learn.cantrill.io/courses/730712/lectures/32357244
 
 - Network Starter Pack - 3 - Network - Part 1
+
   - https://learn.cantrill.io/courses/730712/lectures/25141550
 
 - Network Starter Pack - 3 - Network - Part 2
+
   - https://learn.cantrill.io/courses/730712/lectures/25141552
 
 - Network Starter Pack - 3 - Network - Part 3
+
   - https://learn.cantrill.io/courses/730712/lectures/25141553
 
 - Network Starter Pack - 4 - Transport - Part 1
+
   - https://learn.cantrill.io/courses/730712/lectures/25171215
 
 - Network Starter Pack - 4 - Transport - Part 2
+
   - https://learn.cantrill.io/courses/730712/lectures/25171216
 
 - Network Starter Pack - EXTRA - Network Address Translation - PART1
+
   - https://learn.cantrill.io/courses/730712/lectures/25279341
 
 - Network Starter Pack - EXTRA - Network Address Translation - PART2
+
   - https://learn.cantrill.io/courses/730712/lectures/25279345
 
 - Network Starter Pack - EXTRA - Subnetting - PART1
+
   - https://learn.cantrill.io/courses/730712/lectures/26984983
 
 - Network Starter Pack - EXTRA - Subnetting - PART2
   - https://learn.cantrill.io/courses/730712/lectures/26984984
 
-- Network Starter Pack - EXTRA - Distributed Denial of Service (DDOS)
-  - https://learn.cantrill.io/courses/730712/lectures/26952882
+---
 
-- Secure Sockets Layer (SSL) and Transport Layer Security (TLS)
-  - https://learn.cantrill.io/courses/730712/lectures/27799870
+## Network Starter Pack - EXTRA - Distributed Denial of Service (DDOS)
 
-- Hash Functions & Hashing
-  - https://learn.cantrill.io/courses/730712/lectures/41817977
+Distributed Denial of Service (DDOS) attacks are effective at disrupting web applications no matter their size.
 
-- Digital Signatures
-  - https://learn.cantrill.io/courses/730712/lectures/41818183
+They are generally initiated from networks of compromised machines known as Botnets.
 
+They come in 3 common types...
+
+Application Layer
+Protocol Attacks
+Volumetric Attacks
+This lesson steps through the architecture of all 3 ... the attack method and the components used.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/730712/lectures/26952882
+
+---
+
+## Secure Sockets Layer (SSL) and Transport Layer Security (TLS)
+
+Secure Sockets Layer (SSL) and Transport Layer Security (TLS) are what provides the encrypted communications for HTTPS and other encrypted connection oriented protocols. This lesson steps through how the handshake process works for TLS and some of the key components.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301663
+
+---
+
+## Hash Functions & Hashing
+
+This video steps through how hashing works , what it's used for and why it's really important as a supporting process for many other areas of tech. It also explains a critical MD5 vulnerability vs something more secure like SHA2-256.
+
+https://marc-stevens.nl/research/papers/MTh%20Marc%20Stevens%20-%20On%20Collisions%20for%20MD5.pdf
+
+https://natmchugh.blogspot.com/2015/02/create-your-own-md5-collisions.html
+
+https://www.sentinelone.com/cybersecurity-101/hashing/
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/730712/lectures/41817977
+
+---
+
+## Digital Signatures
+
+This video explores how public key cryptography, signing and hashing can be used to provide authenticity and integrity checks on data of all kinds. Digital signatures support many of the other tech used day to day within AWS and beyond.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/730712/lectures/41818183
+
+---
+
+## DNS 101 Miniseries
+
+The Domain Name System (DNS) is a core part of most applications and IT systems. If you work as a developer, engineer, solutions architect, devops engineer, security engineer or in any other IT role - you HAVE to understand DNS. DNS uses a fairly complex hierarchical structure to allow scaling and delegation. In this series of videos I will step you through the functionality of DNS from what it does, why it's needed, how it works and elaborate on many of the core pieces of functionality.
+
+In this video I will start by explaining what DNS does ... in super simple terms.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/43290509
+https://learn.cantrill.io/courses/1820301/lectures/43290510
+https://learn.cantrill.io/courses/1820301/lectures/43290514
+https://learn.cantrill.io/courses/1820301/lectures/43290516
+https://learn.cantrill.io/courses/1820301/lectures/43390310
+
+DNSSEC strengthens authentication in DNS using digital signatures based on public key cryptography. With DNSSEC, it's not DNS queries and responses themselves that are cryptographically signed, but rather DNS data itself is signed by the owner of the data.
+
+This video steps through what benefits DNSSEC provides and one of the common attacks which can be conducted against DNS.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/43390310
+https://learn.cantrill.io/courses/1820301/lectures/43390325
+https://learn.cantrill.io/courses/1820301/lectures/43390327
+
+---
+
+## Recovery Point Objective (RPO) and Recovery Time Objective (RTO)
+
+Recovery Point Objective (RPO) and Recovery Time Objective (RTO) are essential concepts to understand in almost all areas of IT, Cloud and AWS. They inform much of the design choices relating to backups, restore and resilience within systems.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/43601660
+
+---
 
 # AWS Fundamentals
-___
+
+---
 
 ## AWS Public vs Private Services
 
@@ -386,12 +550,11 @@ In this lesson I explain the difference between the two - focussing on the netwo
 
 https://github.com/acantril/aws-sa-associate-saac02/blob/master/04-AWS-Fundamentals/00_LearningAids/Public%26PrivateServices.pdf
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14040998
 
-___
+---
 
 ## AWS Global Infrastructure
 
@@ -401,18 +564,15 @@ This lesson reviews the main architectural components of AWS, Regions, Edge Loca
 
 It also discusses what it means to be Globally Resilient, Regional Resilient and AZ resilient.
 
-
 **Lesson Links**
 
 AWS Website used in this lesson https://www.infrastructure.aws/
-
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041000
 
-
-___
+---
 
 ## AWS Default Virtual Private Cloud (VPC)
 
@@ -424,12 +584,11 @@ They always have the same IP range and same '1 subnet per AZ' architecture.
 
 This lesson details and demos the functionality of a default VPC.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041001
 
-___
+---
 
 ## Elastic Compute Cloud (EC2) Basics
 
@@ -439,12 +598,31 @@ It allows you to provision virtual machines known as instances with resources yo
 
 This lesson provides an initial overview of what an instance is, instance states, what an Amazon Machine Image does and talks about how to connect to instances.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041048
 
-___
+---
+
+## [DEMO] My First EC2 Instance - PART1 & PART 2
+
+This [DEMO] Lesson steps through creating and connecting to a Linux EC2 instance.
+
+It includes an overview of the key configuration elements when creating an instance in the default VPC
+
+using Putty : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs\_ec2\_console
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html#connection-prereqs-private-key
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html#troubleshoot-unprotected-key
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301621
+
+---
 
 ## Simple Storage Service (S3) Basics
 
@@ -456,12 +634,23 @@ It tends to be the default storage location for data ingestion and output for ma
 
 This lesson introduces S3, Objects and Buckets
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041055
 
-___
+---
+
+## [DEMO] My First S3 Bucket
+
+In this [DEMO] Lesson I step through the process of creating a simple S3 bucket and uploading objects.
+
+I demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects :)
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301625
+
+---
 
 ## CloudFormation (CFN) Basics
 
@@ -471,12 +660,25 @@ Templates created in YAML or JSON can be used to automate infrastructure operati
 
 Templates are used to create stacks, which are used to interact with resources in an AWS account.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041060
 
-___
+---
+
+## [DEMO] Simple Automation With CFN
+
+In this [DEMO] lesson we use a CloudFormation template to create and delete an EC2 instance within AWS
+
+Template: https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0058-aws-simplecfn/ec2instance.yaml
+
+CloudFormation Resource Reference : https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301627
+
+---
 
 ## CloudWatch (CW) Basics
 
@@ -486,13 +688,40 @@ It's used through other AWS services for health and performance monitoring, log 
 
 This lesson steps through the basics.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041064
 
+---
 
-___
+## [Demo] Simple Monitoring with Cloudwatch
+
+In this [DEMO] lesson I step you through creating an EC2 instance, and configuring a Cpu Utilisation Alarm.
+
+Demo Steps:
+
+Create an EC2 instance
+t2.micro
+ensure its set to the default VPC and has a public IP
+Optionally enable detailed monitoring
+Connect to the instance and install Extras package and stress
+Install stress (commands listed in code sample below)
+Create an alarm based on the CPU Utilisation of the created instance
+Threshold greater than 15%
+Run stress 'stress -c 2'
+Wait for alarm to .. alarm
+use ctrl + c to cancel stress
+Wait for alarm to return to ..ok
+Delete the alarm
+Delete the instance
+
+Demo Instructions Link: https://github.com/acantril/aws-sa-associate-saac02/blob/master/04-AWS-Fundamentals/04_cloudwatch_demo/demo_instructions.txt
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301629
+
+---
 
 ## Shared Responsibility Model
 
@@ -500,12 +729,11 @@ The Shared Responsibility Model - is how AWS provide clarity around which areas 
 
 The model is useful as you learn about AWS and so this lesson provides a brief introduction
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041065
 
-___
+---
 
 ## High-Availability vs Fault-Tolerance vs Disaster Recovery
 
@@ -515,12 +743,11 @@ Whats more important is understanding the differences between the three - specif
 
 Most technical people don't have a correct grasp .. this lesson aims to ensure that you do, before starting the main course content.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041073
 
-___
+---
 
 ## Domain Name System (DNS) Fundamentals
 
@@ -546,28 +773,12 @@ Root Zone File : https://www.internic.net/domain/root.zone
 
 Delegation Record for .com : https://www.iana.org/domains/root/db/com.html
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14041088
 - https://learn.cantrill.io/courses/730712/lectures/14225527
 
-___
-
-## High-Availability vs Fault-Tolerance vs Disaster Recovery
-
-High Availability (HA), Fault-Tolerance (FT) and Disaster Recover (DR) are three essential concepts to understand for every Solutions Architect.
-
-Whats more important is understanding the differences between the three - specifically HA and FT.
-
-Most technical people don't have a correct grasp .. this lesson aims to ensure that you do, before starting the main course content.
-
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/14041073
-
-___
+---
 
 ## Route53 (R53) Fundamentals
 
@@ -577,7 +788,17 @@ In this lesson I step through how r53 is architectures and some of its benefits 
 
 - https://learn.cantrill.io/courses/730712/lectures/14041089
 
-___
+---
+
+## [DEMO] Registering a Domain
+
+In this video I step through the process which occurs behind the scenes when a domain is registered using a Registrar.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301635
+
+---
 
 ## DNS Record Types
 
@@ -597,9 +818,9 @@ as well as introducing TTL values on records.
 
 - https://learn.cantrill.io/courses/730712/lectures/14041093
 
-
 # IAM, ACCOUNTS AND AWS ORGANISATIONS
-___
+
+---
 
 ## IAM Identity Policies
 
@@ -607,36 +828,15 @@ Identity Policies are attached to AWS identities and either ALLOW or DENY access
 
 In this lesson I step through the main components of an IAM policy .. and discuss in some detail about the priority order or ALLOW and DENY.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14274988
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Policies and permissions in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
 
-
-___
-
-## IAM Users and ARNs
-
-IAM Users are one of the identity types available inside AWS.
-
-They are type you pick when you can identity a single individual or 'thing' which will use that identity - a person, an application or a service account.
-
-In this lesson I detail the architecture of an IAM user ... how it authenticates, and talk about ARNs which are how resources in AWS are identified.
-
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/14275269
-
-**AWS docs:** 
-
-- [Amazon Resource Names (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
-
-___
+---
 
 ## IAM Users and ARNs
 
@@ -646,16 +846,33 @@ They are type you pick when you can identity a single individual or 'thing' whic
 
 In this lesson I detail the architecture of an IAM user ... how it authenticates, and talk about ARNs which are how resources in AWS are identified.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14275269
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Amazon Resource Names (ARNs)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 
-___
+---
+
+## [DEMO] Simple Identity Permissions in AWS
+
+In this [DEMO] lesson we create an IAM user, and experiment with assigning permissions on two S3 buckets via inline policies and managed policies.
+
+The DEMO lesson will require two browsers
+
+the 1st will login to the IAMADMIN user of the general account
+
+the 2nd will login to an IAM user called 'sally' for testing.
+
+This lesson guest stars Thor and Merlin - two animal friends... enjoy :)
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301364
+
+---
 
 ## IAM Groups
 
@@ -671,12 +888,23 @@ Groups are NOT real identities ... can't be used from resource policies and have
 
 - https://learn.cantrill.io/courses/730712/lectures/14275293
 
-**AWS docs:** 
+**AWS docs:**
 
 - [IAM user groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
 
+---
 
-___
+## [DEMO] Permissions control using IAM Groups
+
+In this [DEMO] we investigate how groups can be used to hold permissions for group members.
+
+Permissions which were assigned to the IAM user 'Sally' are migrated to a new development group we create in the demo.
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/41301366
+
+---
 
 ## IAM Roles - The Tech
 
@@ -688,11 +916,11 @@ In this lesson I step through the basic technical and architecture points of AWS
 
 - https://learn.cantrill.io/courses/730712/lectures/14293449
 
-**AWS docs:** 
+**AWS docs:**
 
 - [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
 
-___
+---
 
 ## When to use IAM Roles
 
@@ -706,26 +934,27 @@ It's an important set of skills to have for the exam and real-world AWS usage.
 
 - https://learn.cantrill.io/courses/730712/lectures/14293450
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html)
 
-___
+---
 
 ## Service-linked Roles & PassRole
 
-A service-linked role is a unique type of IAM role that is linked directly to an AWS service. Service-linked roles are predefined by the service and include all the permissions that the service requires to call other AWS services on your behalf. The linked service also defines how you create, modify, and delete a service-linked role. A service might automatically create or delete the role. It might allow you to create, modify, or delete the role as part of a wizard or process in the service. Or it might require that you use IAM to create or delete the role.
+A service-linked role is a unique type of IAM role that is linked directly to an AWS service. Service-linked roles are predefined by the service and include all the permissions that the service requires to call other AWS services on your behalf. The linked service also defines how you create, modify, and delete a service-linked role.
+
+A service might automatically create or delete the role. It might allow you to create, modify, or delete the role as part of a wizard or process in the service. Or it might require that you use IAM to create or delete the role.
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/40570800
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using service-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html)
 
-
-___
+---
 
 ## AWS Organizations
 
@@ -735,11 +964,30 @@ In this lesson I explain AWS Organizations - It's architecture and some of the b
 
 - https://learn.cantrill.io/courses/730712/lectures/14293487
 
-**AWS docs:** 
+**AWS docs:**
 
 - [AWS Organizations](https://aws.amazon.com/organizations/)
 
-___
+---
+
+## [DEMO] AWS Organizations - PART1 & 2
+
+In this [DEMO] Lesson we will create an organisation for the Animals4life business.
+
+The GENERAL account will become the MASTER account for the organisation
+
+We will invite the PRODUCTION account as a MEMBER account and create the DEVELOPMENT account as a MEMBER account.
+
+Finally - we will create an OrganizationAccountAccessRole in the production account, and use this role to switch between accounts.
+
+WARNING : If you get an error "You have exceeded the allowed number of AWS Accounts" then you can go here https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/organizations/quotas/L-29A0C5DF and request a quote increase for the number of member accounts in an ORG
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301371
+https://learn.cantrill.io/courses/1820301/lectures/41301372
+
+---
 
 ## Service Control Policies (SCPs)
 
@@ -755,12 +1003,21 @@ SCPs DON'T GIVE permission - they just control what an account CAN and CANNOT gr
 
 - https://learn.cantrill.io/courses/730712/lectures/14293489
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Service control policies (SCPs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
 
-___
+---
 
+## [DEMO] Using Service Control Policies
+
+In this [DEMO] lesson we update the structure within the organization - and apply an SCP to the PRODUCTION account to test their capabilities.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301374
+
+---
 
 ## CloudWatch Logs
 
@@ -776,11 +1033,11 @@ This lesson introduces the main concepts of CloudWatch Logs and its architecture
 
 - https://learn.cantrill.io/courses/730712/lectures/14293489
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon CloudWatch Logs?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
 
-___
+---
 
 ## CloudTrail
 
@@ -794,19 +1051,49 @@ It can be configured to store data indefinitely in S3 or CloudWatch Logs.
 
 In this lesson I detail the theory and architecture of the product.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14304051
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is AWS CloudTrail?](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
 
+---
+
+## [DEMO] Implementing an Organizational Trail
+
+In this [DEMO] lesson we will implement a Organizational CloudTrail for the Animals4life organisation.
+
+This CloudTrail will be configured for all regions and set to log global services events.
+
+We will set the trail to log to an S3 bucket and then enhance it to inject data into CloudWatch Logs.
+
+CloudTrail Pricing : https://aws.amazon.com/cloudtrail/pricing/
+
+CloudWatch Logs Pricing : https://aws.amazon.com/cloudwatch/pricing/
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301377
+
+---
+
+## AWS Control Tower 101
+
+AWS Control Tower offers a straightforward way to set up and govern an AWS multi-account environment, following prescriptive best practices. AWS Control Tower orchestrates the capabilities of several other AWS services, including AWS Organizations, AWS Service Catalog, and AWS IAM Identity Center (successor to AWS Single Sign-On), to build a landing zone in less than an hour. Resources are set up and managed on your behalf.
+
+AWS Control Tower orchestration extends the capabilities of AWS Organizations. To help keep your organizations and accounts from drift, which is divergence from best practices, AWS Control Tower applies preventive and detective controls (guardrails). For example, you can use guardrails to help ensure that security logs and necessary cross-account access permissions are created, and not altered.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/42087171
+
+---
 
 # SIMPLE STORAGE SERVICE (S3)
 
-___
+---
 
 ## S3 Security (Resource Policies & ACLs)
 
@@ -816,36 +1103,15 @@ This lesson introduces bucket policies and warns you off using ACLs
 
 Bucket Policy Examples : https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14305158
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
-___
-
-## S3 Security (Resource Policies & ACLs)
-
-S3 Security is controlled via a combination of Identity Policies, Bucket Policies (Resource Policies) and Legacy Bucket and Object ACLs
-
-This lesson introduces bucket policies and warns you off using ACLs
-
-Bucket Policy Examples : https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html
-
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/14305158
-
-**AWS docs:** 
-
-- [What is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
-
-___
-
+---
 
 ## S3 Static Hosting
 
@@ -865,7 +1131,20 @@ S3 Pricing : https://aws.amazon.com/s3/pricing/
 
 [Hosting a static website using Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 
-___
+---
+
+## [Demo] Creating a static website with S3 - PART1 & PART 2
+
+In this [DEMO] lesson we use s3 to create a static website showing Animals4life TOP 10 animals (the results are completely fair - and unbiased)
+
+Demo Files (download and extract) https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0042-aws-mixed-s3-static-website/static_website_hosting.zip
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301471
+https://learn.cantrill.io/courses/1820301/lectures/41301472
+
+---
 
 ## S3 Object Versioning & MFA Delete
 
@@ -879,7 +1158,6 @@ Versioning is an essential feature to understand for the exam.
 
 MFADelete is a related feature which is also discussed.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14305171
@@ -888,7 +1166,19 @@ MFADelete is a related feature which is also discussed.
 
 [Deleting object versions from a versioning-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/DeletingObjectVersions.html)
 
-___
+---
+
+## [DEMO] - S3 Versioning
+
+In this [DEMO] lesson we look at how Object Versioning can be used in a real-world like scenario.
+
+This lesson looks at a 'Animal of the week' website, and how to use versioning to recover when objects are changed and deleted accidentally or intentionally.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301474
+
+---
 
 ## S3 Performance Optimization
 
@@ -900,7 +1190,6 @@ Multipart Upload
 
 Finishing up by reviewing how S3 Transfer Acceleration works and how it could benefit Animals4life remote workers when uploading large data sets.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14305180
@@ -909,74 +1198,21 @@ Finishing up by reviewing how S3 Transfer Acceleration works and how it could be
 
 [Best practices design patterns: optimizing Amazon S3 performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
 
-___
+---
 
-## S3 Performance Optimization
+## [DEMO] - S3 Performance
 
-This lesson reviews how S3 Uploads (PutObject) works
+This lesson explores how easy it is to enable Accelerated Transfer on an S3 bucket and review the AWS provided tool to complete Direct uploads vs Accelerated Transfer
 
-Single PUT Upload
+AWS Accelerated Transfer:
 
-Multipart Upload
-
-Finishing up by reviewing how S3 Transfer Acceleration works and how it could benefit Animals4life remote workers when uploading large data sets.
-
+Tool : http://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html
 
 **Link to video:**
 
-- https://learn.cantrill.io/courses/730712/lectures/14305180
+https://learn.cantrill.io/courses/1820301/lectures/41301476
 
-**AWS docs:**
-
-[Best practices design patterns: optimizing Amazon S3 performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
-
-___
-
-## Encryption 101 - Part 1
-
-In part 1 of this lesson I step through the difference between encryption at rest, and encryption in transit.
-
-I discuss the high level components of encryption and provide definitions
-
-We look at Symmetric encryption - how it works, and what its limitations are
-
-and we finish by evaluation Asymmetric encryption and how it addresses these problems.
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/14368208
-
-**AWS docs:**
-
-[Protecting data using encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html)
-
-___
-
-## Encryption 101 - Part 1 & 2
-
-In part 1 of this lesson I step through the difference between encryption at rest, and encryption in transit.
-
-I discuss the high level components of encryption and provide definitions
-
-We look at Symmetric encryption - how it works, and what its limitations are
-
-and we finish by evaluation Asymmetric encryption and how it addresses these problems.
-
-
-In Part 2 of this lesson I step through the process of signing - and how it can help to prove identity using Asymmetric keys
-
-and we finish up talking about steganography the processing of hiding data inside of something else.
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/14368208
-- https://learn.cantrill.io/courses/730712/lectures/14368213
-
-**AWS docs:**
-
-[Protecting data using encryption](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingEncryption.html)
-
-___
+---
 
 ## Key Management Service (KMS)
 
@@ -990,7 +1226,7 @@ AWS Key Management Service (AWS KMS) makes it easy for you to create and manage 
 
 [AWS Key Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 
-___
+---
 
 ## Object Encryption
 
@@ -1001,8 +1237,6 @@ SSE-C
 SSE-S3
 SSE-KMS
 As part of the lesson we review how SSE-KMS impacts permissions and how it can achieve role separation.
-
-
 
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/default-bucket-encryption.html
 
@@ -1019,8 +1253,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerSideEncryptionCustomerKeys
 - https://learn.cantrill.io/courses/730712/lectures/14305204
 - https://learn.cantrill.io/courses/730712/lectures/14391330
 
-
-___
+---
 
 ## Key Management Service (KMS)
 
@@ -1034,8 +1267,48 @@ AWS Key Management Service (AWS KMS) makes it easy for you to create and manage 
 
 [AWS Key Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 
+---
 
-___
+## [DEMO] KMS - Encrypting the battleplans with KMS
+
+In this [DEMO] lesson we run through the practical steps of creating and configuring a KMS Key, an Alias and we use that Key and the CLI tools to encrypt and decrypt some data.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301480
+
+---
+
+## Object Encryption
+
+This lesson steps through the various encryption options available within S3 and finishes by looking at default bucket encryption settings
+
+Client-Side Encryption
+SSE-C
+SSE-S3
+SSE-KMS
+
+As part of the lesson we review how SSE-KMS impacts permissions and how it can achieve role separation.
+
+**AWS docs:**
+
+https://docs.aws.amazon.com/AmazonS3/latest/user-guide/default-bucket-encryption.html
+
+https://docs.aws.amazon.com/kms/latest/developerguide/services-s3.html
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerSideEncryptionCustomerKeys.html
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301481
+https://learn.cantrill.io/courses/1820301/lectures/41301482
+https://learn.cantrill.io/courses/1820301/lectures/41301483
+
+---
 
 ## S3 Object Storage Classes
 
@@ -1049,14 +1322,12 @@ https://aws.amazon.com/s3/pricing/
 
 https://aws.amazon.com/s3/storage-classes/
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/24266000
 - https://learn.cantrill.io/courses/730712/lectures/24266028
 
-
-___
+---
 
 ## S3 Lifecycle Configuration
 
@@ -1070,7 +1341,7 @@ This lesson steps through S3 lifecycle management/configuration/rules both in th
 
 [Examples of S3 Lifecycle configuration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-configuration-examples.html)
 
-___
+---
 
 ## S3 Replication
 
@@ -1082,19 +1353,29 @@ Same-Region Replication (SRR) is used when the buckets are in the same region.
 
 This lesson introduces the theory, features and limitations of both of these methods.
 
-https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-what-is-isnot-replicated.html
-
-Lesson Links
+**AWS docs:**
 
 https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html
 
 https://aws.amazon.com/about-aws/whats-new/2019/11/amazon-s3-replication-time-control-for-predictable-replication-time-backed-by-sla/
 
+https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-what-is-isnot-replicated.html
+
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14305189
 
-___
+---
+
+## [DEMO] Cross-Region Replication of an S3 Static Website
+
+In this [DEMO] We create 2 S3 buckets - one in N. Virginia, the other in N. California and configure Cross-Region Replication (CRR) between the two.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301488
+
+---
 
 ## S3 PreSigned URLs
 
@@ -1108,7 +1389,19 @@ Presigned URL's are a feature of S3 which allows the system to generate a URL wi
 
 [Using presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
 
-___
+---
+
+## [DEMO] Creating and using PresignedURLs
+
+In this [DEMO] lesson you will create a bucket, upload an object and generate a presignedURL allowing access for any unauthenticated identities.
+
+Sample Image to use : https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0032-aws-s3-presignedURL/all5.jpg
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301490
+
+---
 
 ## S3 Select and Glacier Select
 
@@ -1122,7 +1415,7 @@ S3 and Glacier Select allow you to use a SQL-Like statement to retrieve partial 
 
 [Querying Archives with S3 Glacier Select](https://docs.aws.amazon.com/amazonglacier/latest/dev/glacier-select.html)
 
-___
+---
 
 ## S3 Events
 
@@ -1136,7 +1429,7 @@ The Amazon S3 notification feature enables you to receive notifications when cer
 
 [Amazon S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/NotificationHowTo.html)
 
-___
+---
 
 ## S3 Access Logs
 
@@ -1150,17 +1443,27 @@ Server access logging provides detailed records for the requests that are made t
 
 [Enabling Amazon S3 server access logging](https://docs.aws.amazon.com/AmazonS3/latest/userguide/enable-server-access-logging.html)
 
+---
+
+## S3 Object Lock
+
+You can use S3 Object Lock to store objects using a write-once-read-many (WORM) model. It can help you prevent objects from being deleted or overwritten for a fixed amount of time or indefinitely. You can use S3 Object Lock to meet regulatory requirements that require WORM storage, or add an extra layer of protection against object changes and deletion.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/42834820
+
+---
 
 # VIRTUAL PRIVATE CLOUD (VPC) BASICS
-___
+
+---
 
 ## VPC Sizing and Structure
 
-
 This lesson steps through the design choices around VPC design and IP planning.
 
-
-Lesson Links
+**Lesson Links**
 
 https://aws.amazon.com/answers/networking/aws-single-vpc-design/
 
@@ -1173,7 +1476,7 @@ https://github.com/acantril/aws-sa-associate-saac02/tree/master/07-VPC-Basics/01
 - https://learn.cantrill.io/courses/730712/lectures/14419885
 - https://learn.cantrill.io/courses/730712/lectures/14441636
 
-___
+---
 
 ## Custom VPCs
 
@@ -1181,17 +1484,17 @@ This video steps through the architecture and features of Custom VPCs including 
 
 In the second half .. a [DEMO] portion - we implement the VPC shell for the Animals4life (A4L) organization in our accounts.
 
-
-
-Lesson Links
+**Lesson Links**
 
 VPC Limits https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html
+
+Architecture https://raw.githubusercontent.com/acantril/aws-sa-associate-saac03/main/0800-VIRTUAL_PRIVATE_CLOUD(VPC)/00_LEARNINGAIDS/VPCStucture-1.png
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/14419886
 
-___
+---
 
 ## VPC Subnets
 
@@ -1207,7 +1510,21 @@ We also cover the IPs which are reserved and unavailable for use in every VPC an
 
 [Subnets for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html)
 
-___
+---
+
+## [DEMO] Implement multi-tier VPC subnets
+
+In this [DEMO] lesson we step through how to implement the multi-tier subnet design for Animals4Life including IPv6 configuration for subnets
+
+Subnet Calculator : https://www.site24x7.com/tools/ipv4-subnetcalculator.html
+
+Subnets.txt https://learn-cantrill-labs.s3.amazonaws.com/awscoursedemos/0059-aws-mixed-vpcsubnets/subnets.txt
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/41301350
+
+---
 
 ## VPC Routing, Internet Gateway & Bastion Hosts
 
@@ -1222,32 +1539,32 @@ The lesson finishes by briefly discussing what a Bastion or Jumpbox does.
 **AWS docs:**
 
 - [Configure route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html)
-- [Connect to the internet using an internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
 
-___
+---
 
-## VPC Routing, Internet Gateway & Bastion Hosts
+## [DEMO] Configuring A4l public subnets and Jumpbox
 
-In this lesson we step through the architecture and functionality of Route Tables, Routes, Associations, the internet gateway and public IP v4 functionality within a VPC
+In this [DEMO] Lesson we implement an Internet Gateway, Route Tables and Routes within the Animals4life VPC to support the WEB public subnets.
 
-The lesson finishes by briefly discussing what a Bastion or Jumpbox does.
+Once the WEB subnets are public, we create a bastion host with public IPv4 addressing and connect to it to test.
+
+By the end of this [DEMO] you will have a fully working public capable VPC and bastion ingress point.
+
+**Jumpboxes are bad - but you need to understand how to spot bad things**
 
 **Link to video:**
 
-- https://learn.cantrill.io/courses/730712/lectures/14419889
+https://learn.cantrill.io/courses/aws-certified-solutions-architect-associate-saa-c03/lectures/41301352
 
-**AWS docs:**
+https://learn.cantrill.io/courses/aws-certified-solutions-architect-associate-saa-c03/lectures/41301353
 
-- [Configure route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html)
-
-___
+---
 
 ## Stateful vs Stateless Firewalls
 
 Firewalls can either be stateless or stateful - this lesson explains the difference between the two.
 
 Developing an understanding, is essential to be able to implement these networking security features in AWS.
-
 
 **Link to video:**
 
@@ -1257,12 +1574,11 @@ Developing an understanding, is essential to be able to implement these networki
 
 - [Network Firewall stateless and stateful rules engines](https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-rules-engines.html)
 
-___
+---
 
 ## Network Access Control Lists (NACLs)
 
 A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. This lesson steps through the features of a NACL, the impact of their stateless nature and some of the key points to be aware of for the exam.
-
 
 **Link to video:**
 
@@ -1273,7 +1589,7 @@ A network access control list (ACL) is an optional layer of security for your VP
 - [Control traffic to subnets using Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
 - [Access control list (ACL) overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html)
 
-___
+---
 
 ## Security Groups (SG)
 
@@ -1291,7 +1607,7 @@ But.. SGs are not capable of explicitly blocking traffic - so often require assi
 
 - [Control traffic to resources using security groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
 
-___
+---
 
 ## Network Address Translation (NAT) & NAT Gateway
 
@@ -1300,6 +1616,7 @@ In this 2-part lesson we step through the architecture of Network Address Transl
 and we look at the NAT Gateway service - AWS NAT-as-a-service Gateway Product.
 
 **Link to video:**
+
 - https://learn.cantrill.io/courses/730712/lectures/14419891
 - https://learn.cantrill.io/courses/730712/lectures/14499321
 
@@ -1307,26 +1624,21 @@ and we look at the NAT Gateway service - AWS NAT-as-a-service Gateway Product.
 
 - [Architecture with an internet gateway and a NAT gateway](https://docs.aws.amazon.com/network-firewall/latest/developerguide/arch-igw-ngw.html)
 
-___
+---
 
-## Network Address Translation (NAT) & NAT Gateway
+## [DEMO] Implementing private internet access using NAT Gateways
 
-In this 2-part lesson we step through the architecture of Network Address Translation or (NAT) - what it does, and why it's required within AWS.
-
-and we look at the NAT Gateway service - AWS NAT-as-a-service Gateway Product.
+In this [DEMO] lesson you will implement a highly-available regionally resilient NAT Gateway solution within the Animals4life VPC. You will create three Nat Gateways, Route tables and Default Routes with the Nat Gateway as a target and finally associate those Route Tables with the Reserved, App and DB subnets in AZ A, B and C before testing the solution using the internal instance.
 
 **Link to video:**
-- https://learn.cantrill.io/courses/730712/lectures/14419891
-- https://learn.cantrill.io/courses/730712/lectures/14499321
 
-**AWS docs:**
+https://learn.cantrill.io/courses/aws-certified-solutions-architect-associate-saa-c03/lectures/42262547
 
-- [Architecture with an internet gateway and a NAT gateway](https://docs.aws.amazon.com/network-firewall/latest/developerguide/arch-igw-ngw.html)
-
-
+---
 
 # ELASTIC COMPUTE CLOUD (EC2) BASICS
-___
+
+---
 
 ## Virtualization
 
@@ -1341,15 +1653,16 @@ Lesson Links
 
 http://www.brendangregg.com/blog/2017-11-29/aws-ec2-virtualization-2017.html
 
-
 **Link to video:**
+
 - https://learn.cantrill.io/courses/730712/lectures/14549314
 
 **AWS docs:**
 
 - [Linux AMI virtualization types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/virtualization_types.html)
 - [What is Amazon EC2?](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
-___
+
+---
 
 ## EC2 Architecture and Resilience
 
@@ -1358,13 +1671,14 @@ This lesson reviews the architecture of EC2
 Looking specifically at EC2 Hosts, how they are physically architected, why they are AZ resilient, and how the resilience of the Elastic Block Store (EBS) factors into our decisions as Solutions Architects.
 
 **Link to video:**
+
 - https://learn.cantrill.io/courses/730712/lectures/14549494
 
 **AWS docs:**
 
 - [Resilience in Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/disaster-recovery-resiliency.html)
 
-___
+---
 
 ## EC2 Instance Types
 
@@ -1378,12 +1692,12 @@ https://aws.amazon.com/ec2/instance-types/
 
 https://ec2instances.info/
 
-
 **Link to video:**
+
 - https://learn.cantrill.io/courses/730712/lectures/14550449
 - https://learn.cantrill.io/courses/730712/lectures/14550451
 
-___
+---
 
 ## Storage Refresher
 
@@ -1404,7 +1718,7 @@ Throughput
 
 - [Using Amazon S3 storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 
-___
+---
 
 ## Elastic Block Store (EBS) Service Architecture
 
@@ -1426,7 +1740,7 @@ Throughput
 - [Amazon Elastic Block Store (Amazon EBS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 - [Category: Amazon Elastic Block Store (Amazon EBS)](https://aws.amazon.com/blogs/architecture/category/storage/amazon-elastic-block-storage-ebs/)
 
-___
+---
 
 ## EBS Volume Types - General Purpose
 
@@ -1443,7 +1757,7 @@ General Purpose SSD — Provides a balance of price and performance. We recommen
 - [Amazon Elastic Block Store (Amazon EBS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 - [Category: Amazon Elastic Block Store (Amazon EBS)](https://aws.amazon.com/blogs/architecture/category/storage/amazon-elastic-block-storage-ebs/)
 
-___
+---
 
 ## EBS Volume Types - Provisioned IOPS
 
@@ -1460,8 +1774,7 @@ Provisioned IOPS SSD — Provides high performance for mission-critical, low-lat
 - [Amazon Elastic Block Store (Amazon EBS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 - [Category: Amazon Elastic Block Store (Amazon EBS)](https://aws.amazon.com/blogs/architecture/category/storage/amazon-elastic-block-storage-ebs/)
 
-
-___
+---
 
 ## EBS Volume Types - HDD-Based
 
@@ -1479,7 +1792,7 @@ Cold HDD — The lowest-cost HDD design for less frequently accessed workloads.
 - [Amazon Elastic Block Store (Amazon EBS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 - [Category: Amazon Elastic Block Store (Amazon EBS)](https://aws.amazon.com/blogs/architecture/category/storage/amazon-elastic-block-storage-ebs/)
 
-___
+---
 
 ## Instance Store Volumes - Architecture
 
@@ -1497,7 +1810,7 @@ The virtual devices for instance store volumes are `ephemeral[0-23]`. Instance t
 
 - [Amazon EC2 instance store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)
 
-___
+---
 
 ## Choosing between the EC2 Instance Store and EBS
 
@@ -1511,7 +1824,7 @@ https://aws.amazon.com/ec2/instance-types/
 
 - https://learn.cantrill.io/courses/730712/lectures/14561544
 
-___
+---
 
 ## Snapshots, Restore & Fast Snapshot Restore (FSR)
 
@@ -1531,7 +1844,7 @@ This lesson steps through the theory and architecture of EBS Snapshots.
 
 - [Amazon EBS fast snapshot restore](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-fast-snapshot-restore.html)
 
-___
+---
 
 ## EBS Encryption
 
@@ -1547,7 +1860,7 @@ In the second part of the lesson, i demonstrate how to interact with EBS from an
 
 - [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 
-___
+---
 
 ## EBS Encryption
 
@@ -1563,7 +1876,7 @@ In the second part of the lesson, i demonstrate how to interact with EBS from an
 
 - [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 
-___
+---
 
 ## EC2 Purchase Options
 
@@ -1584,7 +1897,7 @@ Dedicated host
 
 - [Instance purchasing options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html)
 
-___
+---
 
 ## EC2 Purchase Options
 
@@ -1592,17 +1905,16 @@ This lesson looks at Scheduled Reserved Instances, the differences between zonal
 
 Each of these are essential cost control and capacity control features you need to understand at the pro level.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/36046914
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Reserved Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html)
 - [Reserved Instances (RIs)](https://aws.amazon.com/aws-cost-management/aws-cost-optimization/reserved-instances/)
 
-___
+---
 
 ## Instance Status Checks & Auto Recovery
 
@@ -1616,12 +1928,12 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html
 
 - https://learn.cantrill.io/courses/730712/lectures/14616991
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Status checks for your instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html)
 - [Recover your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html)
 
-___
+---
 
 ## Horizontal & Vertical Scaling
 
@@ -1635,13 +1947,15 @@ This lesson provides a high level overview of the differences, pros and cons of 
 
 - https://learn.cantrill.io/courses/730712/lectures/14617207
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Dynamic scaling for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html)
 
+---
 
 # CONTAINERS & ECS
-___
+
+---
 
 ## Introduction to Containers
 
@@ -1653,11 +1967,11 @@ In this lesson I step through container computing, container images, fs layers, 
 
 - https://learn.cantrill.io/courses/730712/lectures/14639197
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Containers](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/containers.html)
 
-___
+---
 
 ## ECS - Concepts
 
@@ -1673,11 +1987,11 @@ https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskDefinition.htm
 
 - https://learn.cantrill.io/courses/730712/lectures/14640456
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
 
-___
+---
 
 ## ECS - Cluster Mode
 
@@ -1701,9 +2015,11 @@ This lesson steps through the key architectures of both.
 
 [Amazon ECS clusters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html)
 
+---
 
 # ADVANCED EC2
-___
+
+---
 
 ## Bootstrapping EC2 using User Data
 
@@ -1721,7 +2037,7 @@ In this lesson I step through the architecture and some key concepts
 
 [Bootstrapping container instances with Amazon EC2 user data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/bootstrap_container_instance.html)
 
-___
+---
 
 ## Enhanced Bootstrapping with CFN-INIT
 
@@ -1741,7 +2057,7 @@ This lesson covers the CFN-INIT and CFN-SIGNAL architectures.
 
 [Bootstrapping AWS CloudFormation Windows stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-windows-stacks-bootstrapping.html)
 
-___
+---
 
 ## EC2 Instance Roles & Profile
 
@@ -1757,7 +2073,7 @@ Short Term Temporary credentials are available via the EC2 Instance Metadata and
 
 [Bootstrapping AWS CloudFormation Windows stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-windows-stacks-bootstrapping.html)
 
-___
+---
 
 ## SSM Parameter Store
 
@@ -1775,7 +2091,7 @@ https://learn.cantrill.io/courses/730712/lectures/14726329
 
 - [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)
 
-___
+---
 
 ## System and Application Logging on EC2
 
@@ -1789,7 +2105,7 @@ In this lesson we learn about the CloudWatch agent - which is capable of adding 
 
 [Amazon Elastic Compute Cloud (Amazon EC2) - system level logs](https://docs.aws.amazon.com/managedservices/latest/userguide/access-to-logs-ec2.html)
 
-___
+---
 
 ## EC2 Placement Groups
 
@@ -1809,7 +2125,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
 
 [Placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html)
 
-___
+---
 
 ## Dedicated Hosts
 
@@ -1821,12 +2137,11 @@ Generally dedicated hosts are used for applications which use physical core/sock
 
 https://aws.amazon.com/ec2/dedicated-hosts/pricing/
 
-
 **Link to video:**
 
 https://learn.cantrill.io/courses/730712/lectures/14727083
 
-___
+---
 
 ## Enhanced Networking & EBS Optimized
 
@@ -1842,10 +2157,9 @@ https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/enhanced-networking.html
 
 https://learn.cantrill.io/courses/730712/lectures/14760364
 
-
 # Route 53 - Global DNS
 
-___
+---
 
 ## R53 Public Hosted Zones
 
@@ -1855,11 +2169,11 @@ A public hosted zone is a container that holds information about how you want to
 
 - https://learn.cantrill.io/courses/730712/lectures/28015249
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Working with public hosted zones](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/AboutHZWorkingWith.html)
 
-___
+---
 
 ## R53 Private Hosted Zones
 
@@ -1869,11 +2183,11 @@ A private hosted zone is a container that holds information about how you want A
 
 - https://learn.cantrill.io/courses/730712/lectures/28015250
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Working with private hosted zones](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html)
 
-___
+---
 
 ## CNAME vs R53 Alias
 
@@ -1883,12 +2197,12 @@ The differences between CNAME and ALIAS and when to use one v's the other.
 
 - https://learn.cantrill.io/courses/730712/lectures/28015254
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using custom URLs by adding alternate domain names (CNAMEs)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html)
 - [Choosing between alias and non-alias records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
 
-___
+---
 
 ## Simple Routing
 
@@ -1898,11 +2212,11 @@ Simple routing lets you configure standard DNS records, with no special Route 53
 
 - https://learn.cantrill.io/courses/730712/lectures/28015256
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Simple routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-simple.html)
 
-___
+---
 
 ## R53 Health Checks
 
@@ -1916,11 +2230,11 @@ Amazon Route 53 health checks monitor the health and performance of your web app
 
 - https://learn.cantrill.io/courses/730712/lectures/28015257
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Creating Amazon Route 53 health checks and configuring DNS failover](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html)
 
-___
+---
 
 ## Failover Routing
 
@@ -1930,11 +2244,11 @@ Failover routing lets you route traffic to a resource when the resource is healt
 
 - https://learn.cantrill.io/courses/730712/lectures/28015259
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Configuring DNS failover](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring.html)
 
-___
+---
 
 ## Multi Value Routing
 
@@ -1944,11 +2258,11 @@ Multivalue answer routing lets you configure Amazon Route 53 to return multiple 
 
 - https://learn.cantrill.io/courses/730712/lectures/28015261
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Multivalue answer routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-multivalue.html)
 
-___
+---
 
 ## Weighted Routing
 
@@ -1958,11 +2272,11 @@ Weighted routing lets you associate multiple resources with a single domain name
 
 - https://learn.cantrill.io/courses/730712/lectures/28015261
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Weighted routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-weighted.html)
 
-___
+---
 
 ## Latency Routing
 
@@ -1972,25 +2286,25 @@ If your application is hosted in multiple AWS Regions, you can improve performan
 
 - https://learn.cantrill.io/courses/730712/lectures/28015264
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Latency-based routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-latency.html)
 
-___
+---
 
 ## Geolocation Routing
 
-Geolocation routing lets you choose the resources that serve your traffic based on the geographic location of your users, meaning the location that DNS queries originate from. 
+Geolocation routing lets you choose the resources that serve your traffic based on the geographic location of your users, meaning the location that DNS queries originate from.
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/28015269
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Geolocation Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geo.html)
 
-___
+---
 
 ## Geoproximity
 
@@ -2000,11 +2314,11 @@ Geoproximity routing lets Amazon Route 53 route traffic to your resources based 
 
 - https://learn.cantrill.io/courses/730712/lectures/28015271
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Geoproximity routing (traffic flow only)](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy-geoproximity.html)
 
-___
+---
 
 ## R53 Interoperability
 
@@ -2014,16 +2328,13 @@ This lesson details how Route53 provides Registrar and DNS Hosting features and 
 
 - https://learn.cantrill.io/courses/730712/lectures/28015272
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Supported DNS record types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html)
 
-
-
 # Relational Database Service (RDS)
 
-
-___
+---
 
 ## Database Refresher & MODELS - PART1 - SQL
 
@@ -2033,11 +2344,11 @@ This 2-part lesson steps through some DB fundamentals with Part 1 focussing on t
 
 - https://learn.cantrill.io/courses/730712/lectures/14831877
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Amazon Relational Database Service](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
 
-___
+---
 
 ## Database Refresher & MODELS - PART2 - NoSQL
 
@@ -2053,11 +2364,11 @@ Part 2 steps through some alternative database models - and some potential scena
 
 - https://learn.cantrill.io/courses/730712/lectures/14831884
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is NoSQL?](https://aws.amazon.com/nosql/)
 
-___
+---
 
 ## ACID vs BASE
 
@@ -2073,12 +2384,12 @@ This lesson steps through the ACID and BASE Database transaction models and intr
 
 - https://learn.cantrill.io/courses/730712/lectures/30062911
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Managing complex workflows with DynamoDB transactions](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transactions.html)
 - [Using Athena ACID transactions](https://docs.aws.amazon.com/athena/latest/ug/acid-transactions.html)
 
-___
+---
 
 ## Databases on EC2
 
@@ -2088,11 +2399,11 @@ This lesson steps through the architecture of running DB's on EC2. The lesson re
 
 - https://learn.cantrill.io/courses/730712/lectures/14835740
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Choosing between Amazon EC2 and Amazon RDS](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-sql-server/comparison.html)
 
-___
+---
 
 ## Relational Database Service (RDS) Architecture
 
@@ -2104,11 +2415,11 @@ This lesson steps through the high level architecture of the product and details
 
 - https://learn.cantrill.io/courses/730712/lectures/14899227
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon Relational Database Service (Amazon RDS)?](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)
 
-___
+---
 
 ## RDS High-Availability (Multi AZ)
 
@@ -2122,12 +2433,12 @@ Backups, software updates and restarts can take advantage of MultiAZ to reduce u
 
 - https://learn.cantrill.io/courses/730712/lectures/14923950
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Multi-AZ deployments for high availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html)
 - [Amazon RDS Multi-AZ](https://aws.amazon.com/rds/features/multi-az/)
 
-___
+---
 
 ## RDS Automatic Backup, RDS Snapshots and Restore
 
@@ -2145,11 +2456,11 @@ Snapshots can be restored .. but create a new RDS instance.
 
 - https://learn.cantrill.io/courses/730712/lectures/14923952
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Backing up and restoring an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_CommonTasks.BackupRestore.html)
 
-___
+---
 
 ## RDS Read-Replicas
 
@@ -2165,12 +2476,12 @@ N.B they don't help with data corruption as the corruption will be replicated to
 
 - https://learn.cantrill.io/courses/730712/lectures/14923953
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Amazon RDS Read Replicas](https://aws.amazon.com/rds/features/read-replicas/)
 - [Working with read replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
 
-___
+---
 
 ## RDS Data Security
 
@@ -2180,11 +2491,11 @@ This lesson steps through RDS Encryption at rest and RDS IAM authentication
 
 - https://learn.cantrill.io/courses/730712/lectures/27570953
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Security in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.html)
 
-___
+---
 
 ## Aurora Architecture
 
@@ -2198,11 +2509,11 @@ This lesson steps through the changes introduced with the Aurora architecture.
 
 - https://learn.cantrill.io/courses/730712/lectures/14923964
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon Aurora?](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
 
-___
+---
 
 ## Aurora Serverless
 
@@ -2212,11 +2523,11 @@ This lesson reviews the architecture of Aurora Serverless and compares it agains
 
 - https://learn.cantrill.io/courses/730712/lectures/14954142
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using Aurora Serverless v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html)
 
-___
+---
 
 ## Aurora Global Database
 
@@ -2228,11 +2539,11 @@ Replication occurs at the storage layer and is generally ~1second between all AW
 
 - https://learn.cantrill.io/courses/730712/lectures/14954149
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using Amazon Aurora global databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html)
 
-___
+---
 
 ## Aurora Multi-master writes
 
@@ -2242,11 +2553,11 @@ Multi-master write is a mode of Aurora Provisioned Clusters which allows multipl
 
 - https://learn.cantrill.io/courses/730712/lectures/14954151
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Working with Aurora multi-master clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html)
 
-___
+---
 
 ## Database Migration Service (DMS)
 
@@ -2258,16 +2569,13 @@ The service is capable of moving databases INTO or OUT of AWS.
 
 - https://learn.cantrill.io/courses/730712/lectures/15747976
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Database Migration Service?](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html)
 
-
-
 # NETWORK STORAGE & DATA LIFECYCLE
 
-
-___
+---
 
 ## EFS Architecture
 
@@ -2279,7 +2587,7 @@ EFS can play an essential part in building scalable and resilient syste
 
 - https://learn.cantrill.io/courses/730712/lectures/14990550
 
-**AWS docs:** 
+**AWS docs:**
 
 - https://en.wikipedia.org/wiki/File_system_permissions
 
@@ -2289,11 +2597,9 @@ EFS can play an essential part in building scalable and resilient syste
 
 - https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html
 
-
-
 # HA & SCALING
 
-___
+---
 
 ## Regional and Global AWS Architecture
 
@@ -2305,12 +2611,11 @@ It introduces global and regional perspectives and the tiers or components which
 
 - https://learn.cantrill.io/courses/730712/lectures/36048264
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Regions and Availability Zones](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 
-
-___
+---
 
 ## Elastic Load Balancer
 
@@ -2324,11 +2629,11 @@ Two new versions the v2 Application and v2 Network load balancers are now the re
 - https://learn.cantrill.io/courses/730712/lectures/36048304
 - https://learn.cantrill.io/courses/730712/lectures/36048305
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is an Application Load Balancer?](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
 
-___
+---
 
 ## Application Load balancing (ALB) vs Network Load Balancing (NLB)
 
@@ -2338,11 +2643,11 @@ This lesson steps through the main features and some important considerations wh
 
 - https://learn.cantrill.io/courses/730712/lectures/36048307
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
 
-___
+---
 
 ## Launch Configuration and Templates
 
@@ -2358,12 +2663,12 @@ This lesson steps through briefly how they both work.
 
 - https://learn.cantrill.io/courses/730712/lectures/36048308
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
 - [Launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-templates.html)
 
-___
+---
 
 ## Auto-Scaling Groups
 
@@ -2373,17 +2678,17 @@ An Auto Scaling group contains a collection of Amazon EC2 instances that are tre
 
 - https://learn.cantrill.io/courses/730712/lectures/36048316
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Auto Scaling groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-groups.html)
 
-___
+---
 
 ## ASG Scaling Policies
 
 With step scaling and simple scaling, you choose scaling metrics and threshold values for the CloudWatch alarms that trigger the scaling process. You also define how your Auto Scaling group should be scaled when a threshold is in breach for a specified number of evaluation periods.
 
-Step scaling policies and simple scaling policies are two of the dynamic scaling options available for you to use. Both require you to create CloudWatch alarms for the scaling policies. Both require you to specify the high and low thresholds for the alarms. Both require you to define whether to add or remove instances, and how many, or set the group to an exact size. 
+Step scaling policies and simple scaling policies are two of the dynamic scaling options available for you to use. Both require you to create CloudWatch alarms for the scaling policies. Both require you to specify the high and low thresholds for the alarms. Both require you to define whether to add or remove instances, and how many, or set the group to an exact size.
 
 The main difference between the policy types is the step adjustments that you get with step scaling policies. When step adjustments are applied, and they increase or decrease the current capacity of your Auto Scaling group, the adjustments vary based on the size of the alarm breach.
 
@@ -2391,25 +2696,25 @@ The main difference between the policy types is the step adjustments that you ge
 
 - https://learn.cantrill.io/courses/730712/lectures/36048317
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Step and simple scaling policies for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html)
 
-___
+---
 
 ## ASG Lifecycle Hooks
 
-Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. When an instance is paused, it remains in a wait state either until you complete the lifecycle action using the complete-lifecycle-action command or the ```CompleteLifecycleAction``` operation, or until the timeout period ends (one hour by default).
+Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. When an instance is paused, it remains in a wait state either until you complete the lifecycle action using the complete-lifecycle-action command or the `CompleteLifecycleAction` operation, or until the timeout period ends (one hour by default).
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/36048319
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html)
 
-___
+---
 
 ## ASG HealthCheck Comparison - EC2 vs ELB
 
@@ -2425,12 +2730,12 @@ Amazon EC2 Auto Scaling can determine the health status of an instance using one
 
 - https://learn.cantrill.io/courses/730712/lectures/36048320
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Add Elastic Load Balancing health checks to an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-elb-healthcheck.html)
 - [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
 
-__
+\_\_
 
 ## SSL Offload & Session Stickiness
 
@@ -2445,13 +2750,12 @@ Additionally the lesson steps through what session stickiness means, and why it 
 
 - https://learn.cantrill.io/courses/730712/lectures/15828867
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Configure sticky sessions for your Classic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html)
 - [Sticky sessions for your Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/sticky-sessions.html)
-  
 
-___
+---
 
 ## Gateway Load Balancer
 
@@ -2461,15 +2765,13 @@ Gateway Load Balancers enable you to deploy, scale, and manage virtual appliance
 
 - https://learn.cantrill.io/courses/730712/lectures/34350240
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is a Gateway Load Balancer?](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html)
 
-
-
 # SERVERLESS AND APPLICATION SERVICES
 
-___
+---
 
 ## Architecture Deep Dive - PART1 and PART2
 
@@ -2482,11 +2784,11 @@ Part 2 continues by looking at evolutions using a queue based design, to achieve
 - https://learn.cantrill.io/courses/730712/lectures/15190436
 - https://learn.cantrill.io/courses/730712/lectures/15190450
 
-**AWS docs:** 
+**AWS docs:**
 
 - [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 
-___
+---
 
 ## AWS Lambda
 
@@ -2504,11 +2806,11 @@ Part 3 looks at invocation modes, versions & aliases, Latency, destinations and 
 - https://learn.cantrill.io/courses/730712/lectures/36049039
 - https://learn.cantrill.io/courses/730712/lectures/36049040
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Lambda instruction set architectures](https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html)
 
-___
+---
 
 ## CloudWatchEvents and EventBridge
 
@@ -2524,15 +2826,14 @@ Both services are one way how event driven architectures can be implemented with
 
 - https://learn.cantrill.io/courses/730712/lectures/15191500
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is Amazon CloudWatch Events?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html)
 
 - [What Is Amazon EventBridge?](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
 
+---
 
-___
- 
 ## Serverless Architecture
 
 The Serverless architecture is a evolution/combination of other popular architectures such as event-driven and microservices.
@@ -2547,12 +2848,12 @@ Serverless starts to feature more and more on the AWS exams - so its a critical 
 
 - https://learn.cantrill.io/courses/730712/lectures/15267917
 
-**AWS docs:** 
+**AWS docs:**
 
 - [AWS Serverless Multi-Tier Architectures with Amazon API Gateway and AWS Lambda](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/welcome.html)
 
-___
- 
+---
+
 ## Simple Notification Service
 
 The Simple Notification Service or SNS .. is a PUB SUB style notification system which is used within AWS products and services but can also form an essential part of serverless, event-driven and traditional application architectures.
@@ -2567,12 +2868,12 @@ SNS supports a wide variety of subscriber types including other AWS services suc
 
 - https://learn.cantrill.io/courses/730712/lectures/15267920
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon SNS?](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
 
-___
- 
+---
+
 ## Step Functions
 
 Step functions is a product which lets you build long running serverless workflow based applications within AWS which integrate with many AWS services.
@@ -2581,12 +2882,12 @@ Step functions is a product which lets you build long running serverless workflo
 
 - https://learn.cantrill.io/courses/730712/lectures/15267923
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Step Functions?](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html)
 
-___
- 
+---
+
 ## API Gateway
 
 API Gateway is a managed service from AWS which allows the creation of API Endpoints, Resources & Methods.
@@ -2601,12 +2902,12 @@ It can also connect to legacy monolithic applications and act as a stable API en
 
 - https://learn.cantrill.io/courses/730712/lectures/15267912
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon API Gateway?](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
 
-___
- 
+---
+
 ## Simple Queue Service
 
 SQS queues are a managed message queue service in AWS which help to decouple application components, allow Asynchronous messaging or the implementation of worker pools.
@@ -2615,12 +2916,12 @@ SQS queues are a managed message queue service in AWS which help to decouple app
 
 - https://learn.cantrill.io/courses/730712/lectures/15267945
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
 
-___
- 
+---
+
 ## Kinesis Data Streams
 
 Kinesis data streams are a streaming service within AWS designed to ingest large quantities of data and allow access to that data for consumers.
@@ -2635,12 +2936,12 @@ This lesson ends by evaluating the differences between SQS and Kinesis, and iden
 
 - https://learn.cantrill.io/courses/730712/lectures/36049059
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is Amazon Kinesis Data Streams?](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)
 
-___
- 
+---
+
 ## Kinesis Data Firehose
 
 Kinesis Data Firehose is a stream based delivery service capable of delivering high throughput streaming data to supported destinations in near realtime.
@@ -2651,12 +2952,12 @@ Its a member of the kinesis family and for the PRO level exam it's critical to h
 
 - https://learn.cantrill.io/courses/730712/lectures/36049060
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is Amazon Kinesis Data Firehose?](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html)
 
-___
- 
+---
+
 ## Kinesis Data Analytics
 
 Amazon Kinesis Data Analytics is the easiest way to analyze streaming data, gain actionable insights, and respond to your business and customer needs in real time.
@@ -2667,17 +2968,17 @@ it is part of the kinesis family of products and is capable of operating in real
 
 - https://learn.cantrill.io/courses/730712/lectures/36049063
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is Amazon Kinesis Data Analytics for SQL Applications?](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/what-is.html)
 
-___
- 
+---
+
 ## Amazon Cognito - User and Identity Pools
 
 A user pool is a user directory in Amazon Cognito. With a user pool, your users can sign in to your web or mobile app through Amazon Cognito. Your users can also sign in through social identity providers like Google, Facebook, Amazon, or Apple, and through SAML identity providers. Whether your users sign in directly or through a third party, all members of the user pool have a directory profile that you can access through a Software Development Kit (SDK).
 
-Amazon Cognito identity pools (federated identities) enable you to create unique identities for your users and federate them with identity providers. With an identity pool, you can obtain temporary, limited-privilege AWS credentials to access other AWS services. 
+Amazon Cognito identity pools (federated identities) enable you to create unique identities for your users and federate them with identity providers. With an identity pool, you can obtain temporary, limited-privilege AWS credentials to access other AWS services.
 
 This lesson reviews the features of the product and talks through some example architectures.
 
@@ -2685,17 +2986,14 @@ This lesson reviews the features of the product and talks through some example a
 
 - https://learn.cantrill.io/courses/730712/lectures/32121076
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon Cognito?](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html)
 
-
-
 # GLOBAL CONTENT DELIVERY AND OPTIMIZATION
 
+---
 
-___
- 
 ## Cloudfront Architecture
 
 CloudFront is a Content Delivery network (CDN) within AWS.
@@ -2706,13 +3004,12 @@ This lesson steps through the basic architecture
 
 - https://learn.cantrill.io/courses/730712/lectures/36049951
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon CloudFront?](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
+---
 
-___
- 
 ## Cloudfront Behaviours
 
 CloudFront Behaviours control much of the TTL, protocol and privacy settings within CloudFront
@@ -2723,12 +3020,12 @@ This lesson steps through settings configured at a distribution level and those 
 
 - https://learn.cantrill.io/courses/730712/lectures/36049952
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon CloudFront?](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
-___
- 
+---
+
 ## CF TTL and Invalidations
 
 This lesson steps through how CloudFront handles object expiry and invalidation
@@ -2739,49 +3036,46 @@ Default TTL, Minimum TTL, Maximum TTL
 
 And Cache Invalidation
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/36049953
 
-**AWS docs:** 
+**AWS docs:**
 
 - [How CloudFront processes and caches HTTP 4xx and 5xx status codes from your origin](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html)
 
-___
- 
+---
+
 ## ACM
 
 The AWS certificate Manage is a service which allows the creation, management and renewal of certificates. It allows deployment of certificates onto supported AWS services such as CloudFront and ALB.
-
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/15356375
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is AWS Certificate Manager?](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html)
 
-___
- 
+---
+
 ## Cloudfront and SSL/TLS
 
 Understanding CloudFront and SSL is essential for the exam
 
 This lesson steps through the certificate requirements for the viewer and origin side and steps through the reasons for SNI, and how it works.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/36049954
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Requirements for using SSL/TLS certificates with CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html)
 
-___
- 
+---
+
 ## Origin Types & Origin Architecture
 
 CloudFront origins store content distributed via edge locations.
@@ -2790,18 +3084,17 @@ The features available differ based on using S3 origins vs Custom origins
 
 Supported SSL/TLS protocols and ciphers for communication between viewers and CloudFront
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/36049955
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html)
 - [Supported protocols and ciphers between viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html#secure-connections-supported-ciphers)
 
-___
- 
+---
+
 ## Securing CF and S3 using OAI
 
 Origin Access Identities are a feature where virtual identities can be created, associated with a CloudFront Distribution and deployed to edge locations.
@@ -2816,32 +3109,29 @@ This lesson covers the main ways to secure origins from direct access (bypassing
 - Custom Headers - For Custom Origins
 - IP Based FW Blocks - For Custom Origins.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/15356377
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Restricting access to Amazon S3 content by using an origin access identity (OAI)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html)
 
-___
- 
+---
+
 ## Lambda@Edge
 
 Lambda@Edge allows cloudfront to run lambda function at CloudFront edge locations to modify traffic between the viewer and edge location and edge locations and origins.
-
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/22696404
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Personalize content by country or device type headers - examples](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples)
 
-
-___
+---
 
 ## Global Accelerator
 
@@ -2851,14 +3141,13 @@ AWS Global Accelerator is designed to improve global network performance by offe
 
 - https://learn.cantrill.io/courses/730712/lectures/15790988
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Global Accelerator?](https://docs.aws.amazon.com/global-accelerator/latest/dg/what-is-global-accelerator.html)
 
-
 # VPC Flow Logs
 
-___
+---
 
 ## VPC Flow Logs
 
@@ -2874,12 +3163,12 @@ Flow Logs can be stored on S3 or CloudWatch Logs
 
 - https://learn.cantrill.io/courses/730712/lectures/15443338
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Publish flow logs to Amazon S3](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html)
 - [Publish flow logs to CloudWatch Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-cwl.html)
 
-___
+---
 
 ## Egress-Only Internet gateway
 
@@ -2889,11 +3178,11 @@ Egress-Only internet gateways allow outbound (and response) only access to the p
 
 - https://learn.cantrill.io/courses/730712/lectures/15443339
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Enable outbound IPv6 traffic using an egress-only internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/egress-only-internet-gateway.html)
 
-___
+---
 
 ## VPC Endpoints (Gateway)
 
@@ -2905,11 +3194,11 @@ Gateway endpoints add 'prefix lists' to route table, allowing the VPC router to 
 
 - https://learn.cantrill.io/courses/730712/lectures/15443340
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Enable outbound IPv6 traffic using an egress-only internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/egress-only-internet-gateway.html)
 
-__
+\_\_
 
 ## VPC Endpoints (Interface)
 
@@ -2923,11 +3212,11 @@ Unlike gateway endpoints - interface endpoints are not highly available by defau
 
 - https://learn.cantrill.io/courses/730712/lectures/15443340
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Enable outbound IPv6 traffic using an egress-only internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/egress-only-internet-gateway.html)
 
-___
+---
 
 ## VPC Peering
 
@@ -2941,30 +3230,29 @@ In this lesson I step through the architectural key points which you'll need to 
 
 - https://learn.cantrill.io/courses/730712/lectures/15443346
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is VPC peering?](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
 
-
 # HYBRID ENVIRONMENTS AND MIGRATION
 
-___
+---
 
 ## Border Gateway Protocol 101
 
 This lesson provides a high level introduction to the Border Gateway Protocol (BGP) which is used by some AWS services such as Direct Connect and Dynamic Site to Site VPNs.
 
-N.B this lesson has been added as an OPTIONAL ADVANCED lesson for any students who want to understand what BGP is - its more toward the PROFESSIONAL level, so if you don't understand it fully ... 
+N.B this lesson has been added as an OPTIONAL ADVANCED lesson for any students who want to understand what BGP is - its more toward the PROFESSIONAL level, so if you don't understand it fully ...
 
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/20129430
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Routing policies and BGP communities](https://docs.aws.amazon.com/directconnect/latest/UserGuide/routing-and-bgp.html)
 
-___
+---
 
 ## AWS Site-to-Site VPN
 
@@ -2974,11 +3262,11 @@ AWS Site-to-Site VPN is a hardware VPN solution which creates a highly available
 
 - https://learn.cantrill.io/courses/730712/lectures/15532724
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Site-to-Site VPN?](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html)
 
-___
+---
 
 ## Direct Connect
 
@@ -2992,12 +3280,11 @@ This lesson attempts to teach you all of the theory and architecture you will ne
 
 - https://learn.cantrill.io/courses/730712/lectures/15532730
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Direct Connect?](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html)
 
-
-___
+---
 
 ## Direct Connect Resilience
 
@@ -3007,11 +3294,11 @@ This lesson steps through the architecture of a few resilient implementations of
 
 - https://learn.cantrill.io/courses/730712/lectures/24660629
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Resilience in AWS Direct Connect](https://docs.aws.amazon.com/directconnect/latest/UserGuide/disaster-recovery-resiliency.html)
 
-___
+---
 
 ## Transit Gateway
 
@@ -3025,11 +3312,11 @@ In this lesson I step through the features which allow for a significant reducti
 
 - https://learn.cantrill.io/courses/730712/lectures/15532731
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is a transit gateway?](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html)
 
-___
+---
 
 ## Storage gateway
 
@@ -3049,11 +3336,11 @@ Understanding the features of each, and when to use those features is a key part
 
 - https://learn.cantrill.io/courses/730712/lectures/15532734
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon S3 File Gateway](https://docs.aws.amazon.com/filegateway/latest/files3/what-is-file-s3.html)
 
-___
+---
 
 ## Snowball / Edge / Snowmobile
 
@@ -3065,11 +3352,11 @@ Knowing which to pick and why is essential for the solutions architect exam .. i
 
 - https://learn.cantrill.io/courses/730712/lectures/15532735
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is AWS Snowball Edge?](https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html)
 
-___
+---
 
 ## Directory Service
 
@@ -3087,11 +3374,11 @@ This lesson steps through the architecture of the service and explains scenarios
 
 - https://learn.cantrill.io/courses/730712/lectures/15690951
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Directory Service?](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html)
 
-___
+---
 
 ## DataSync
 
@@ -3101,11 +3388,11 @@ AWS DataSync is a product which can orchestrate the movement of large scale data
 
 - https://learn.cantrill.io/courses/730712/lectures/15690952
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS DataSync?](https://docs.aws.amazon.com/datasync/latest/userguide/what-is-datasync.html)
 
-___
+---
 
 ## FSx for Windows Servers
 
@@ -3119,11 +3406,11 @@ It provides advanced features such as VSS, Data de-duplication, backups, encrypt
 
 - https://learn.cantrill.io/courses/730712/lectures/15749267
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is FSx for Windows File Server?](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html)
 
-___
+---
 
 ## FSx For Lustre
 
@@ -3135,15 +3422,13 @@ It delivers extreme performance for scenarios such as Big Data, Machine Learning
 
 - https://learn.cantrill.io/courses/730712/lectures/22586267
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Aggregate file system performance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/performance.html#fsx-aggregate-perf)
 
-
-
 # SECURITY, DEPLOYMENT & OPERATIONS
 
-___
+---
 
 ## AWS Secrets Manager
 
@@ -3157,16 +3442,15 @@ For supported services it can even adjust the credentials of the service itself.
 
 - https://learn.cantrill.io/courses/730712/lectures/15793908
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS Secrets Manager?](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
 
-
-___
+---
 
 ## AWS WAF & Shield
 
-AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define. 
+AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define.
 
 https://aws.amazon.com/waf/pricing/
 
@@ -3178,12 +3462,11 @@ https://www.cloudflare.com/en-au/learning/ddos/what-is-a-ddos-attack/
 
 - https://learn.cantrill.io/courses/730712/lectures/15792890
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What are AWS WAF, AWS Shield, and AWS Firewall Manager?](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html)
 
-
-___
+---
 
 ## CloudHSM
 
@@ -3197,12 +3480,11 @@ https://en.wikipedia.org/wiki/FIPS_140-2
 
 - https://learn.cantrill.io/courses/730712/lectures/15828633
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS CloudHSM?](https://docs.aws.amazon.com/cloudhsm/latest/userguide/introduction.html)
 
-
-___
+---
 
 ## AWS Config
 
@@ -3216,11 +3498,11 @@ AWS Config is capable of checking for compliance .. and generating notifications
 
 - https://learn.cantrill.io/courses/730712/lectures/30035588
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What Is AWS Config?](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
 
-___
+---
 
 ## Amazon Macie
 
@@ -3232,7 +3514,7 @@ This lesson steps through the theory and architecture of the product.
 
 - https://learn.cantrill.io/courses/730712/lectures/30036454
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using managed data identifiers in Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html)
 
@@ -3240,8 +3522,7 @@ This lesson steps through the theory and architecture of the product.
 
 - [Types of Amazon Macie findings](https://docs.aws.amazon.com/macie/latest/user/findings-types.html)
 
-
-___
+---
 
 ## Amazon Inspector
 
@@ -3251,11 +3532,11 @@ Amazon Inspector is an automated security assessment service that helps improve 
 
 - https://learn.cantrill.io/courses/730712/lectures/36408324
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Using managed data identifiers in Amazon Macie](https://docs.aws.amazon.com/macie/latest/user/managed-data-identifiers.html)
 
-___
+---
 
 ## Amazon Guardduty
 
@@ -3267,16 +3548,15 @@ This lesson steps through its capabilities and supported datasources.
 
 - https://learn.cantrill.io/courses/730712/lectures/36408326
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is Amazon GuardDuty?](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
 
-
 # Infrastructure as Code (CloudFormation)
 
-___
+---
 
-## CloudFormation Physical & Logical Resources 
+## CloudFormation Physical & Logical Resources
 
 CloudFormation defines logical resources within templates (using YAML or JSON). The logical resource defines the WHAT, and leaves the HOW up to the CFN product. A CFN stack creates a physical resource for every logical resource - updating or deleting them as a template changes.
 
@@ -3284,13 +3564,13 @@ CloudFormation defines logical resources within templates (using YAML or JSON). 
 
 - https://learn.cantrill.io/courses/730712/lectures/36204848
 
-**AWS docs:** 
+**AWS docs:**
 
 - [What is AWS CloudFormation?](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
 - [AWS resource and property types reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 
-___
+---
 
 ## CloudFormation Template and Pseudo Parameters
 
@@ -3300,11 +3580,11 @@ Template and Pseudo Parameters are two methods to provide input to a template, w
 
 - https://learn.cantrill.io/courses/730712/lectures/36204864
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Pseudo parameters reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html)
 
-___
+---
 
 ## CloudFormation Intrinsic Functions
 
@@ -3314,12 +3594,11 @@ AWS CloudFormation provides several built-in functions that help you manage your
 
 - https://learn.cantrill.io/courses/730712/lectures/36204866
 
-**AWS docs:** 
+**AWS docs:**
 
 - [ntrinsic function reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html)
 
-
-___
+---
 
 ## CloudFormation Mappings
 
@@ -3329,11 +3608,11 @@ The optional Mappings section matches a key to a corresponding set of named valu
 
 - https://learn.cantrill.io/courses/730712/lectures/36204867
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Mapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html)
 
-___
+---
 
 ## CloudFormation Outputs
 
@@ -3343,12 +3622,11 @@ The optional Outputs section declares output values that you can import into oth
 
 - https://learn.cantrill.io/courses/730712/lectures/36204867
 
-**AWS docs:** 
+**AWS docs:**
 
 - [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)
 
-
-___
+---
 
 ## CloudFormation Conditions
 
@@ -3362,7 +3640,7 @@ The optional Conditions section contains statements that define the circumstance
 
 - [Conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/conditions-section-structure.html)
 
-___
+---
 
 ## CloudFormation DependsOn
 
@@ -3376,7 +3654,7 @@ With the DependsOn attribute you can specify that the creation of a specific res
 
 - [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
 
-___
+---
 
 ## CloudFormation Wait Conditions & cfn-signal
 
@@ -3392,7 +3670,7 @@ CreationPolicy, WaitConditions and cfn-signal can all be used together to preven
 
 - [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)
 
-___
+---
 
 ## CloudFormation Wait Conditions & cfn-signal
 
@@ -3408,8 +3686,7 @@ CreationPolicy, WaitConditions and cfn-signal can all be used together to preven
 
 - [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)
 
-
-___
+---
 
 ## CloudFormation Nested Stacks
 
@@ -3427,7 +3704,7 @@ Nested stacks should be used when the resources being provisioned share a lifecy
 
 - [Working with nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)
 
-___
+---
 
 ## CloudFormation Cross-Stack References
 
@@ -3445,7 +3722,7 @@ They can be exported, and then using the !ImportValue intrinsic function, refere
 
 - [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref.html)
 
-___
+---
 
 ## CloudFormation Stack Sets
 
@@ -3461,7 +3738,7 @@ Additionally it adds a dynamic architecture - allowing automatic operations base
 
 - [StackSets concepts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)
 
-___
+---
 
 ## CloudFormation Deletion Policy
 
@@ -3475,7 +3752,7 @@ With the DeletionPolicy attribute you can preserve or (in some cases) backup a r
 
 - [DeletionPolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
 
-___
+---
 
 ## CloudFormation Deletion Policy
 
@@ -3493,7 +3770,7 @@ It allows role separation and is a powerful security feature.
 
 - [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)
 
-___
+---
 
 ## CloudFormation Init (CFN-INIT)
 
@@ -3509,7 +3786,7 @@ Use the AWS::CloudFormation::Init type to include metadata on an Amazon EC2 inst
 
 - [cfn-init](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html)
 
-___
+---
 
 ## CloudFormation cfn-hup
 
@@ -3525,7 +3802,7 @@ The cfn-hup helper is a daemon that detects changes in resource metadata and run
 
 - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html
 
-___
+---
 
 ## CloudFormation ChangeSets
 
@@ -3539,7 +3816,7 @@ When you need to update a stack, understanding how your changes will affect runn
 
 - [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)
 
-___
+---
 
 ## CloudFormation Custom Resources
 
@@ -3555,19 +3832,18 @@ This lesson steps through the theory and architecture of Custom Resources
 
 - [Custom resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html)
 
+---
 
 
 # NOSQL Databases & DynamoDB
 
-
-___
+---
 
 ## DynamoDB - Architecture
 
 DynamoDB is a NoSQL fully managed Database-as-a-Service (DBaaS) product available within AWS.
 
 In this lesson I step through the key architectural components and features you will need to understand for the exam.
-
 
 **Link to video:**
 
@@ -3578,37 +3854,22 @@ In this lesson I step through the key architectural components and features you 
 - [Amazon DynamoDB Architecture Overview](https://docs.aws.amazon.com/whitepapers/latest/comparing-dynamodb-and-hbase-for-nosql/amazon-dynamodb-architecture-overview.html)
 
 
-___
+---
 
 ## DynamoDB - Operations, Consistency and Performance-PART1
 
 IN PART1 of this lesson series I step through some key elements of READS and WRITES to DynamoDB and step through how the QUERY AND SCAN operations work.
 
-
 **Link to video:**
 
 - https://learn.cantrill.io/courses/730712/lectures/15601351
+- https://learn.cantrill.io/courses/730712/lectures/15603829
 
 **AWS docs:**
 
 - [Amazon DynamoDB: How it works](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.html)
 
-
-___
-
-## DynamoDB - Operations, Consistency and Performance-PART2
-
-In PART 2 of this lesson series we will step through the Consistency model in DynamoDB and them look at two RCU and WCU calculation examples.
-
-**Link to video:**
-
-- https://learn.cantrill.io/courses/730712/lectures/15603829
-
-**AWS docs:**
-
-- [Read consistency](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html)
-
-___
+---
 
 ## DynamoDB Local and Global Secondary Indexes
 
@@ -3628,7 +3889,7 @@ This lesson details the difference between them - and steps through an example w
 
 - [Local Secondary Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/LSI.html)
 
-___
+---
 
 ## DynamoDB - Streams & Lambda Triggers
 
@@ -3654,7 +3915,7 @@ Lambda can be integrated to provide trigger functionality - invoking when new en
 
 - [DynamoDB Streams and AWS Lambda triggers](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.Lambda.html)
 
-___
+---
 
 ## DynamoDB - Global Tables
 
@@ -3670,7 +3931,7 @@ This lesson introduces the architecture and features you will need to understand
 
 - [Amazon DynamoDB global tables](https://aws.amazon.com/dynamodb/global-tables/)
 
-___
+---
 
 ## DynamoDB - Accelerator (DAX)
 
@@ -3685,7 +3946,7 @@ DynamoDB Accelerator (DAX) is an in-memory cache designed specifically for Dynam
 - [Amazon DynamoDB Accelerator (DAX)](https://aws.amazon.com/dynamodb/dax/)
 - [In-memory acceleration with DynamoDB Accelerator (DAX)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.html)
 
-___
+---
 
 ## Amazon Athena
 
@@ -3701,7 +3962,7 @@ Athena is an underrated service capable of working with unstructured, semi-struc
 
 - [What is Amazon Athena?](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
 
-___
+---
 
 ## Elasticache
 
@@ -3719,7 +3980,7 @@ https://aws.amazon.com/elasticache/pricing/
 
 - [Comparing Memcached and Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html)
 
-___
+---
 
 ## Redshift Architecture
 
@@ -3735,7 +3996,8 @@ Its designed for OLAP products within AWS/on-premises to add data to for long te
 
 - [Getting started with Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)
 
-__
+
+___
 
 ## Redshift DR and Resilience
 
@@ -3748,3 +4010,44 @@ This lesson steps through in detail the backup options for redshift to overcome 
 **AWS docs:**
 
 - [Resilience in Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/security-disaster-recovery-resiliency.html)
+
+
+---
+
+# Machine Learning 101
+
+## Amazon Comprehend
+
+Amazon Comprehend is a natural-language processing (NLP) service that uses machine learning to uncover valuable insights and connections in text.
+
+**Link to video:**
+
+https://learn.cantrill.io/courses/1820301/lectures/42157338
+
+## xxx
+
+## xxx
+
+
+___
+
+## Amazon SageMaker
+
+Amazon SageMaker is a fully managed machine learning service. With SageMaker, data scientists and developers can quickly and easily build and train machine learning models, and then directly deploy them into a production-ready hosted environment.
+
+https://aws.amazon.com/sagemaker/pricing/
+
+**Link to video:**
+
+- https://learn.cantrill.io/courses/1820301/lectures/42194151
+
+
+---
+
+# Other Services & Features
+
+## AWS Local Zones
+
+AWS Local Zones are a type of infrastructure deployment that places compute, storage, database, and other select AWS services close to large population and industry centers.
+
+https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/

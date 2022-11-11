@@ -13,6 +13,9 @@
   - [GitHub](#github)
 - [SAA additionals reading - external resources](#saa-additionals-reading---external-resources)
 - [AWS Cheat Sheets](#aws-cheat-sheets)
+- [AWS Architecture Center](#aws-architecture-center)
+- [AWS Solutions Library](#aws-solutions-library)
+- [AWS Well-Architected](#aws-well-architected)
 
 <!-- /TOC -->
 
@@ -97,3 +100,15 @@ https://www.linkedin.com/posts/adriancantrill_were-coming-up-to-the-weekend-the-
 
 - https://tutorialsdojo.com/aws-cheat-sheets/
 
+
+# AWS Architecture Center
+
+- https://aws.amazon.com/architecture
+
+# AWS Solutions Library
+
+- https://aws.amazon.com/solutions/
+
+# AWS Well-Architected
+
+- https://aws.amazon.com/architecture/well-architected
