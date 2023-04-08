@@ -9,3 +9,6 @@ In addition to covering traditional data warehousing concepts, the book also exp
 
 - Link to the book
   - https://learning.oreilly.com/library/view/data-engineering-with/9781800560413/
+
+- Link to GitHub repo of that book
+  - https://github.com/PacktPublishing/Data-Engineering-with-AWS
