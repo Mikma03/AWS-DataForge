@@ -6,7 +6,6 @@
 - [AWS - SAA - Dedicated repo on GitHub - Adrian Cantrill](#aws---saa---dedicated-repo-on-github---adrian-cantrill)
 - [AWS - Slack - Adrian Cantrill](#aws---slack---adrian-cantrill)
 - [AWS - mini projects - Adrian Cantrill](#aws---mini-projects---adrian-cantrill)
-  - [Description](#description)
   - [GitHub](#github)
   - [YouTube channel](#youtube-channel)
 - [Additional resources](#additional-resources)
@@ -19,7 +18,7 @@
 
 # AWS Certification and General Knowledge Repository
 
-**This repository is dedicated to AWS certifications and general knowledge resources. Find helpful resources and links for the AWS Certified Cloud Practitioner exam, AWS Certified Solutions Architect, and more on Data Engineering on AWS platfrom.**
+This repository is dedicated to AWS certifications and general knowledge resources. Find helpful resources and links for the AWS Certified Cloud Practitioner exam, AWS Certified Solutions Architect, and more on Data Engineering on AWS platfrom.
 
 # AWS Certified Cloud Practitioner exam (CLF-C01)
 
@@ -34,7 +33,7 @@
 
 - AWS Certified Solutions Architect - **Adrian Cantrill**
 
-  - https://learn.cantrill.io/p/aws-certified-solutions-architect-associate-saa-c02
+  - https://learn.cantrill.io/courses/enrolled/1820301
 
 - Certified Solutions Architect Associate **Practice Exams**
 
@@ -59,9 +58,6 @@
 
 # AWS - mini projects - Adrian Cantrill
 
-## Description
-
-- https://www.linkedin.com/posts/adriancantrill_were-coming-up-to-the-weekend-the-best-activity-6951070385706516480-okSW/?utm_source=linkedin_share&utm_medium=member_desktop_web
 
 ## GitHub
 
